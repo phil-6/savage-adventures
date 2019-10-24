@@ -1,0 +1,8 @@
+*.idea/*
+*.DS_Store*
+*.iml
+savage-adventures/.idea/encodings.xml
+savage-adventures/.idea/misc.xml
+savage-adventures/.idea/modules.xml
+savage-adventures/.idea/vcs.xml
+savage-adventures/.idea/workspace.xml

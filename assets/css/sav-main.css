@@ -99,6 +99,7 @@ header {
 .btn-orange{
     background-color: var(--red-orange-transparent);
     border-color: var(--red-orange-transparent);
+    color: var(--white);
 }
 .btn-orange:hover{
     background-color: var(--red-orange);

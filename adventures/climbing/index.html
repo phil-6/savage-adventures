@@ -134,34 +134,104 @@
     </div>
     <div class="row">
         <div class="col text-center">
-            <p>We offer a range of activities at Savage Adventures, whether you're a seasoned adventurer or wanting to get outside that little bit more, there is something for you. </p>
-            <h3>More info coming very soon, or if you have any questions just <a href="#bookNowModal" class="" data-toggle="modal" data-target="#bookNowModal">get in touch.</a></h3>
-        </div>
+            <p>Now an olympic sport, climbing is in the spotlight and is rapidly growing in popularity. Climbing is one of the most thrilling, rewarding and unique ways to adventure. Experience the beautiful Welsh national coastline of Pembrokeshire and the Gower Peninsula from a new, vertical, perspective.</p>
+            <p>If you’re new to climbing and want to give it a go or if you’ve climbed before and want to foray into the world of trad, get in touch and we’ll build the day for you.</p>
+            <p>Read on to find out more, or if you have any questions <a href="#bookNowModal" class=""
+                                                                         data-toggle="modal"
+                                                                         data-target="#moreInfoModal">get in touch.</a></p>        </div>
     </div>
-    <div class="row full-width">
-        <img src="../../assets/images/canyoning-flip.jpg">
-    </div>
+    <img width="100%" src="../../assets/images/climbing-abseiling-pembs-crop.jpg">
+
 </section>
 <section class="container-fluid adventures-detail">
-    <div class="row">
-        <h2>What Is Canyoning?</h2>
+    <div class="info-section intro">
+        <p>We offer a range of climbing adventures, whether you want to give it a go or if you want to get out of the climbing gym and try pulling on real rock. Every climb can be tailored to you and your group.</p>
+        <p>We’re going to be adding <strong>more detail to these soon</strong>, but if any of these sound like something you want to do - just drop us a message and we’ll tell you all about it!</p>
     </div>
-    <div class="row">
-        <h2>What's Included</h2>
+    <div class="info-section">
+        <h2>First Steps - Indoor Climbing </h2>
     </div>
-    <div class="row">
-        <h2>What's not Included</h2>
+    <hr>
+    <div class="info-section">
+        <h2>Learn to Lead - Indoor Climbing</h2>
     </div>
-    <div class="row">
-        <h2>Location</h2>
-        <p>Location and timings will be arranged during booking due to the flexibility of activities.</p>
+    <hr>
+    <div class="info-section">
+        <h2>Get Outside - Outdoor Climbing</h2>
     </div>
-    <div class="row">
-        <h2>Price: £45</h2>
+    <hr>
+    <div class="info-section">
+        <h2>Learn Trad - Outdoor Climbing</h2>
+    </div>
+    <hr>
+    <div class="info-section">
+        <h2>Price: £45 pp</h2>
     </div>
 </section>
+<!-- More Info Modal -->
+<div class="modal fade" id="moreInfoModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body background-bec">
+                <div class="row">
+                    <div class="col align-self-end">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                        <h3 class="modal-heading-white modal-heading-top">
+                            Looking for more info?
+                        </h3>
 
-<!-- Modal -->
+                        <h1 class="modal-heading-orange">
+                            Let us know what you need and we'll make it happen.
+                        </h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <form id="contact-us-form-2"
+                              class="gform"
+                              method="POST"
+                              action="https://script.google.com/macros/s/AKfycbyBt2Fbbux35SztXFp2Wt_DIV0Hm-k9r4nLTu0aU9phlYz0uFg/exec">
+                            <!--data-email="bookings@savage-adventures.com"-->
+                            <div class="form-elements">
+                                <div class="row">
+                                    <div class="col name">
+                                        <input type="text" name="name" class="form-control name" placeholder="Name *">
+                                    </div>
+                                    <div class="col email">
+                                        <input type="email" name="email" class="form-control email" placeholder="Email *">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="message" class="form-control message" placeholder="Message">
+                                </div>
+                                <div class="row justify-content-center">
+                                    <button type="submit" class="btn btn-primary"><em>Send</em></button>
+                                </div>
+                            </div>
+                            <div style="display:none" class="thankyou_message">
+                                <!-- You can customize the thankyou message by editing the code below -->
+                                <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                                </h2>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Book Now Modal -->
 <div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

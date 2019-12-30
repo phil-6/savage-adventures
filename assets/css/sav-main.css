@@ -263,6 +263,7 @@ header {
     max-height: 250px;
     /*max-width: 360px;*/
     object-fit: cover;
+    overflow: hidden;
 }
 /*.our-team .card.peter{
     background: var(--savage-bg);

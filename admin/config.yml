@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
   branch: jekyll
+
+site_url: https://vigilant-albattani-19faf8.netlify.app
+local_backend: true
+
 media_folder: "assets/images/uploads"
 collections:
   - name: "about" # Used in routes, e.g., /admin/collections/blog
@@ -11,3 +15,17 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
       - {label: "Title", name: "title", widget: "string"}
+
+  - name: "Top Level Pages"
+    label: "Top Level Pages"
+    editor:
+      preview: true
+    files:
+      - label: "Home"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: default}
+          - {label: Title, name: title, widget: string}
+          - {label: Tagline, name: tagline, widget: string}
+          - { label: 'Body', name: 'body', widget: 'html' }

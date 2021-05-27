@@ -1,5 +1,5 @@
 *.idea/*
 *.DS_Store*
 *.iml
-.jekyll-cache/
-_site/*
+*.jekyll-cache
+*_site

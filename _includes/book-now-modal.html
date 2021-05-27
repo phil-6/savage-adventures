@@ -1,0 +1,63 @@
+<!-- Modal -->
+<div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body background-bec">
+                <div class="row">
+                    <div class="col align-self-end">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                        <h3 class="modal-heading-white modal-heading-top">
+                            Ready to take the plunge?
+                        </h3>
+
+                        <h1 class="modal-heading-orange modal-heading-bottom">
+                            Contact us to book
+                        </h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <form id="contact-us-form"
+                              class="gform"
+                              method="POST"
+                              action="https://script.google.com/macros/s/AKfycbyBt2Fbbux35SztXFp2Wt_DIV0Hm-k9r4nLTu0aU9phlYz0uFg/exec">
+                            <!--data-email="bookings@savage-adventures.com"-->
+                            <div class="form-elements">
+                                <div class="row">
+                                    <div class="col name">
+                                        <input type="text" name="name" class="form-control name" placeholder="Name *">
+                                    </div>
+                                    <div class="col email">
+                                        <input type="email" name="email" class="form-control email" placeholder="Email *">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="message" class="form-control message" placeholder="Message">
+                                </div>
+                                <div class="row justify-content-center">
+                                    <button type="submit" class="btn btn-primary"><em>Send</em></button>
+                                </div>
+                            </div>
+                            <div style="display:none" class="thankyou_message">
+                                <!-- You can customize the thankyou message by editing the code below -->
+                                <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                                </h2>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script data-cfasync="false" type="text/javascript" src="/assets/js/form-submission-handler.js"></script>

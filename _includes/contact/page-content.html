@@ -1,0 +1,37 @@
+<section class="container-fluid page-content">
+    <div class="row mx-auto" id="contact-form-row">
+        <div class="col">
+            <form id="contact-us-form"
+                  class="gform"
+                  method="POST"
+                  action="https://script.google.com/macros/s/AKfycbyBt2Fbbux35SztXFp2Wt_DIV0Hm-k9r4nLTu0aU9phlYz0uFg/exec">
+                <!--data-email="bookings@savage-adventures.com"-->
+                <div class="form-elements">
+                    <div class="row">
+                        <div class="col name">
+                            <input type="text" name="name" class="form-control name" placeholder="Name *">
+                        </div>
+                        <div class="col email">
+                            <input type="email" name="email" class="form-control email" placeholder="Email *">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="message" class="form-control message" placeholder="Message">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-primary"><em>Send</em></button>
+                    </div>
+                </div>
+                <div style="display:none" class="thankyou_message">
+                    <!-- You can customize the thankyou message by editing the code below -->
+                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                    </h2>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script data-cfasync="false" type="text/javascript" src="/assets/js/form-submission-handler.js"></script>

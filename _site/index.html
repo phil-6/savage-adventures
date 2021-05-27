@@ -54,6 +54,8 @@
     <!-- Font Family-->
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:100,300,400,900&display=swap" rel="stylesheet">
 
+    <!-- Netlify Auth -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- StyleSheet -->
     <link rel="stylesheet"
@@ -362,5 +364,16 @@
     </div>
 </div>
 <script data-cfasync="false" type="text/javascript" src="/assets/js/form-submission-handler.js"></script>
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
 </body>
 </html>

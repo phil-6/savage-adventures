@@ -1,4 +1,5 @@
 <!--Main Slideshow-->
+{% assign header_images = site.static_files | where: 'header_image', true %}
 <div id="mainCarousel" class="carousel slide py-4" data-ride="carousel" data-interval="5000">
     <ol class="carousel-indicators">
         <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
@@ -9,12 +10,10 @@
         <li data-target="#mainCarousel" data-slide-to="6"></li>
     </ol>
     <div class="carousel-inner">
-        {% for image in site.static_files %}
-            {% if image.basename contains 'header' %}
-                <div class="carousel-item {% if forloop.index == 64 %}active{% endif %}">
-                    <img class="d-block w-100" src="{{ image.path }}" alt="{{ image.basename }}">
-                </div>
-            {% endif %}
+        {% for image in header_images %}
+            <div class="carousel-item {% if forloop.first == true %}active{% endif %}">
+                <img class="d-block w-100" src="{{ image.path }}" alt="{{ image.basename }}">
+            </div>
         {% endfor %}
     </div>
     <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">

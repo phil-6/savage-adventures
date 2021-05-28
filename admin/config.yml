@@ -5,7 +5,7 @@ backend:
 site_url: https://vigilant-albattani-19faf8.netlify.app
 local_backend: true
 
-media_folder: "assets/images/uploads"
+media_folder: "assets/images/"
 collections:
   - name: "Top Level Pages"
     label: "Top Level Pages"

@@ -11,11 +11,17 @@
                 <div class="row">
                     <div class="col-md-7 page-info">
                         <p>{{ adventure.description }}</p>
-                        <button type="button" class="book-now-button btn btn-orange" data-toggle="modal"
-                                data-target="#bookNowModal">
-                            Book Now!
-                        </button>
-                        <a class="btn btn-green find-out-more-button" href="canyoning">Find out more</a>
+                        {% if adventure.available %}
+                            <button type="button" class="book-now-button btn btn-orange" data-toggle="modal"
+                                    data-target="#bookNowModal">
+                                Book Now!
+                            </button>
+                        {% else %}
+                            <button type="button" class="book-now-button btn btn-orange" disabled>
+                                Coming Soon
+                            </button>
+                        {% endif %}
+                        <a class="btn btn-green find-out-more-button" href="{{ adventure.name | downcase }}">Find out more</a>
                     </div>
                     <div class="col-md-5">
                         <img src="../assets/images/{{ adventure.image }}">
@@ -35,10 +41,17 @@
                     </div>
                     <div class="col-md-7 page-info">
                         <p>{{ adventure.description }}</p>
-                        <button type="button" class="book-now-button btn btn-orange" data-toggle="modal" data-target="#bookNowModal">
-                            Book Now!
-                        </button>
-                        <a class="btn btn-green find-out-more-button" href="coasteering">Find out more</a>
+                        {% if adventure.available %}
+                            <button type="button" class="book-now-button btn btn-orange" data-toggle="modal"
+                                    data-target="#bookNowModal">
+                                Book Now!
+                            </button>
+                        {% else %}
+                            <button type="button" class="book-now-button btn btn-orange" disabled>
+                                Coming Soon
+                            </button>
+                        {% endif %}
+                        <a class="btn btn-green find-out-more-button" href="{{ adventure.name | downcase }}">Find out more</a>
                     </div>
                 </div>
             {% endif %}

@@ -7,8 +7,8 @@ local_backend: true
 
 media_folder: "assets/images/"
 collections:
-  - name: "Top Level Pages"
-    label: "Top Level Pages"
+  - name: "Pages"
+    label: "Pages"
     editor:
       preview: true
     files:
@@ -16,7 +16,39 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-          - {label: Layout, name: layout, widget: hidden, default: default}
-          - {label: Title, name: title, widget: string}
-          - {label: Tagline, name: tagline, widget: string}
-          - {label: 'Body', name: 'body', widget: 'html' }
+          - { label: Layout, name: layout, widget: hidden, default: default }
+          - { label: Title, name: title, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: 'Body', name: 'body', widget: 'html' }
+
+
+      - label: "Adventures"
+        name: "adventures"
+        file: "_data/adventures.yml"
+        editor:
+          preview: false
+        fields:
+          - label: 'Adventure Summaries'
+            name: 'adventures'
+            widget: 'list'
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Available - is this activity currently available"
+                name: "available"
+                widget: "boolean"
+              - label: "Visible - do you want this to be visible on the site"
+                name: "visible"
+                widget: "boolean"
+                default: false
+
+
+
+

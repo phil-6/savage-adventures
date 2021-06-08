@@ -1,9 +1,12 @@
 <section class="container-fluid page-content">
     <div class="card-deck justify-content-center">
-        {% include about/team-members/peter.html %}
-        {% include about/team-members/freya.html %}
-        {% include about/team-members/simon.html %}
-        {% include about/team-members/phil.html %}
-        {% include about/team-members/beckii.html %}
+        {% for member in site.data.team %}
+        <div class="card">
+            <h1>{{ member.name }}</h1>
+            <img src="{{ member.image }}" alt="guide {{ member.name }}">
+            <h3>{{ member.job }}</h3>
+            <p>{{ member.bio }}</p>
+        </div>
+        {% endfor %}
     </div>
 </section>

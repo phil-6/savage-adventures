@@ -3,7 +3,7 @@
         {% for member in site.data.team %}
         <div class="card">
             <h1>{{ member.name }}</h1>
-            <img src="{{ member.image }}" alt="guide {{ member.name }}">
+            <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}">
             <h3>{{ member.job }}</h3>
             <p>{{ member.bio }}</p>
         </div>

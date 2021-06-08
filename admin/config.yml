@@ -21,8 +21,31 @@ collections:
           - { label: Tagline, name: tagline, widget: string }
           - { label: 'Body', name: 'body', widget: 'html' }
 
+      - label: "Team"
+        name: "team"
+        file: "_data/team.yml"
+        editor:
+          preview: false
+        fields:
+          - label: 'Team Members'
+            name: 'team_members'
+            widget: 'list'
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Short Bio"
+                name: "bio"
+                widget: "text"
+              - label: "Visible - do you want this to be visible on the site"
+                name: "visible"
+                widget: "boolean"
+                default: false
 
-      - label: "Adventures"
+      - label: "Adventures Top Page"
         name: "adventures"
         file: "_data/adventures.yml"
         editor:

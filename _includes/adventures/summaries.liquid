@@ -1,0 +1,49 @@
+<section class="container-fluid adventures-summary">
+    {% for adventure in site.data.adventures %}
+        {% if adventure.visible %}
+            {% capture loop %}{% cycle 'odd', 'even' %}{% endcapture %}
+            {% if loop == 'odd' %}
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1>{{ adventure.name }}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 page-info">
+                        <p>{{ adventure.description }}</p>
+                        <button type="button" class="book-now-button btn btn-orange" data-toggle="modal"
+                                data-target="#bookNowModal">
+                            Book Now!
+                        </button>
+                        <a class="btn btn-green find-out-more-button" href="canyoning">Find out more</a>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../assets/images/{{ adventure.image }}">
+                    </div>
+                </div>
+            {% else %}
+                <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-7">
+                        <h1>{{ adventure.name }}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="../assets/images/{{ adventure.image }}">
+                    </div>
+                    <div class="col-md-7 page-info">
+                        <p>{{ adventure.description }}</p>
+                        <button type="button" class="book-now-button btn btn-orange" data-toggle="modal" data-target="#bookNowModal">
+                            Book Now!
+                        </button>
+                        <a class="btn btn-green find-out-more-button" href="coasteering">Find out more</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+
+</section>

@@ -1,0 +1,46 @@
+- name: canyoning
+  image: canyoning-waterfall-group.jpg
+  description: Gain a new and unique perspective on the world famous <strong><a href="https://www.breconbeacons.org/things-to-do/attractions/natural/visiting-waterfall-country/walking-trails">Waterfall Country</a></strong> in the Brecon Beacons, see the rivers from an entirely new angle. Spend an action packed day climbing through waterfalls, exploring behind the curtain and jumping into deep plunge pools. Nature’s own water slides and rapids put waterparks all over the world to shame.
+  available: true
+  visible: true
+
+- name: Coasteering
+  image: coasteering-jump-together.jpg
+  description: Coasteering is defined as “an activity that encompasses movement along the intertidal zone of a rocky coastline on foot or by swimming, without the aid of boats, surf boards or other craft.” Invented 30 years ago on the Welsh coastline, coasteering has grown into a global adventure sport. Come join us for an unforgettable adventure exploring the natural wonder that first inspired the sport.
+  available: true
+  visible: true
+
+- name: Climbing
+  image: canyoning-waterfall-group.jpg
+  description: Gain a new and unique perspective on the world famous <strong><a href="https://www.breconbeacons.org/things-to-do/attractions/natural/visiting-waterfall-country/walking-trails">Waterfall Country</a></strong> in the Brecon Beacons, see the rivers from an entirely new angle. Spend an action packed day climbing through waterfalls, exploring behind the curtain and jumping into deep plunge pools. Nature’s own water slides and rapids put waterparks all over the world to shame.
+  available: true
+  visible: true
+
+- name: Mountain Biking
+  image: mountain-biking-tom-snow.jpg
+  description: >
+    Wales is one of the best destinations for mountain biking in the world, whether you just want to give it a go or have been riding for years and want to find something new we can tailor your adventure to suit. South Wales has an incredible selection of natural trails as well as many world renowned trail centres.
+    Lets go ride our bikes! (Note: Bike ownership is not required for having fun!)
+  available: true
+  visible: true
+
+- name: Walking
+  image: walking-mountain-cloud.jpg
+  description: Feeling like you want to keep both feet on the ground, but don’t want to miss out on the spectacular sights and wonders of Wales…?
+    Well, fear not, with our walking tours you won’t miss out on any of the action.
+    Imagine being stood on the top of some of the best  Mountains in wales and enjoying the picturesque 360° views of the beautiful lakes and forests below.
+  available: true
+  visible: true
+
+- name: SUP
+  image: guide-pete-paddleboard-swim.gif
+  description: Stand Up Paddle Boarding is one of the fastest growing watersports with thousands more people giving it a go each year. We offer the normal range of SUP activities such as SUP rental, coaching and guided tours for everyone who wants to give this fantastic growing sport a try. But if you came here for adventure, we do take things to the next level with mountain SUP expeditions and SUP Yoga in the pool underneath a picturesque hidden waterfall.
+  available: false
+  visible: true
+
+- name: canyoning
+  image: canyoning-waterfall-group.jpg
+  description: Learn to survive like Ray Mears
+  available: false
+  visible: false
+

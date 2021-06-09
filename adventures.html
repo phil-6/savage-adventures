@@ -3,5 +3,18 @@ layout: default
 title: Adventures
 tagline: Find your adventure
 ---
-{% include adventures/page-intro.html %}
+<section class="container-fluid page-intro">
+    <div class="row text-center">
+        <div class="col">
+            <button type="button" class="book-now-button btn btn-primary" data-toggle="modal" data-target="#bookNowModal">
+                Book Your Adventure Now!
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+{% include adventures/page-intro.md %}
+        </div>
+    </div>
 {% include adventures/summaries.liquid %}
+</section>

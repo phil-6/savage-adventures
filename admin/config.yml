@@ -45,6 +45,10 @@ collections:
         editor:
           preview: false
         fields:
+          - label: 'Page Intro'
+            name: 'intro'
+            widget: 'markdown'
+            file: "_includes/adventures/page-intro.md"
           - label: 'Adventure Summaries'
             name: 'adventures'
             widget: 'list'
@@ -59,6 +63,11 @@ collections:
                 name: "visible"
                 widget: "boolean"
                 default: false
+              - label: "Stag & Hen - show this on the stag and hen page"
+                name: "stag-hen"
+                widget: "boolean"
+                default: false
+
 
 
 

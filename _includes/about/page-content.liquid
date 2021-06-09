@@ -1,6 +1,6 @@
 <section class="container-fluid page-content">
     <div class="card-deck justify-content-center">
-        {% for member in site.data.team %}
+        {% for member in site.data.team.team_members %}
         <div class="card">
             <h1>{{ member.name }}</h1>
             <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}">

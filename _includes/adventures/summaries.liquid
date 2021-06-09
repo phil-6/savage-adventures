@@ -1,5 +1,5 @@
 <section class="container-fluid adventures-summary">
-    {% for adventure in site.data.adventures %}
+    {% for adventure in site.data.adventures.adventures %}
         {% if adventure.visible %}
             {% capture loop %}{% cycle 'odd', 'even' %}{% endcapture %}
             {% if loop == 'odd' %}

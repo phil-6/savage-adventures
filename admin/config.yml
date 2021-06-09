@@ -31,15 +31,9 @@ collections:
             name: 'team_members'
             widget: 'list'
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Image"
-                name: "image"
-                widget: "image"
-              - label: "Short Bio"
-                name: "bio"
-                widget: "text"
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Short Bio" ,name: "bio" ,widget: "text" }
               - label: "Visible - do you want this to be visible on the site"
                 name: "visible"
                 widget: "boolean"
@@ -55,15 +49,9 @@ collections:
             name: 'adventures'
             widget: 'list'
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Image"
-                name: "image"
-                widget: "image"
-              - label: "Description"
-                name: "description"
-                widget: "text"
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
               - label: "Available - is this activity currently available"
                 name: "available"
                 widget: "boolean"

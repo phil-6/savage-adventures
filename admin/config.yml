@@ -5,25 +5,36 @@ backend:
 site_url: https://vigilant-albattani-19faf8.netlify.app
 local_backend: true
 
-media_folder: "assets/images/"
+media_folder: 'assets/images/'
 collections:
-  - name: "Pages"
-    label: "Pages"
+  - name: 'Pages'
+    label: 'Pages'
     editor:
       preview: true
     files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
+      - label: 'Home'
+        name: 'home'
+        file: 'index.html'
         fields:
           - { label: Layout, name: layout, widget: hidden, default: default }
           - { label: Title, name: title, widget: string }
           - { label: Tagline, name: tagline, widget: string }
           - { label: 'Body', name: 'body', widget: 'html' }
 
-      - label: "Team"
-        name: "team"
-        file: "_data/team.yml"
+  - label: 'About Page'
+    name: 'about'
+    description: 'About us page'
+    editor:
+      preview: false
+    files:
+      - label: 'Page Intro'
+        name: 'intro'
+        file: '_includes/about/page-intro.md'
+        fields:
+        - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Team'
+        name: 'team'
+        file: '_data/team.yml'
         editor:
           preview: false
         fields:
@@ -31,45 +42,50 @@ collections:
             name: 'team_members'
             widget: 'list'
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Short Bio" ,name: "bio" ,widget: "text" }
-              - label: "Visible - do you want this to be visible on the site"
-                name: "visible"
-                widget: "boolean"
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Short Bio' ,name: 'bio' ,widget: 'text' }
+              - label: 'Visible - do you want this to be visible on the site'
+                name: 'visible'
+                widget: 'boolean'
                 default: false
+      - label: 'Age Info'
+        name: 'age-info'
+        file: '_includes/age-info.md'
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: "Adventures Page"
-    name: "adventures"
+  - label: 'Adventures Page'
+    name: 'adventures'
     description: 'Top level adventures page with summaries'
     editor:
       preview: false
     files:
       - label: 'Page Intro'
         name: 'intro'
-        file: "adventures.html"
+        file: 'adventures.html'
         fields:
           - { name: intro, label: 'Page Intro', widget: markdown }
       - label: 'Summaries'
         name: 'adventures'
         editor:
           preview: false
-        file: "data/adventures.yml"
+        file: 'data/adventures.yml'
         widget: list
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Description", name: "description", widget: "text" }
-          - label: "Available - is this activity currently available"
-            name: "available"
-            widget: "boolean"
-          - label: "Visible - do you want this to be visible on the site"
-            name: "visible"
-            widget: "boolean"
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'Available - is this activity currently available'
+            name: 'available'
+            widget: 'boolean'
+          - label: 'Visible - do you want this to be visible on the site'
+            name: 'visible'
+            widget: 'boolean'
             default: false
-          - label: "Stag & Hen - show this on the stag and hen page"
-            name: "stag-hen"
-            widget: "boolean"
+          - label: 'Stag & Hen - show this on the stag and hen page'
+            name: 'stag-hen'
+            widget: 'boolean'
             default: false
 
 

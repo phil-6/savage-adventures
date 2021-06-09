@@ -1,0 +1,1 @@
+As safety is our main priority any participants aged 10-17 must be accompanied by a responsible adult over 18. Unfortunately, we are currently unable to accept any participants under the age of 10.

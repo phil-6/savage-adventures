@@ -39,34 +39,38 @@ collections:
                 widget: "boolean"
                 default: false
 
-      - label: "Adventures Top Page"
-        name: "adventures"
-        file: "_data/adventures.yml"
+  - label: "Adventures Page"
+    name: "adventures"
+    description: 'Top level adventures page with summaries'
+    editor:
+      preview: false
+    files:
+      - label: 'Page Intro'
+        name: 'intro'
+        file: "adventures.html"
+        fields:
+          - { name: intro, label: 'Page Intro', widget: markdown }
+      - label: 'Summaries'
+        name: 'adventures'
         editor:
           preview: false
+        file: "data/adventures.yml"
+        widget: list
         fields:
-          - label: 'Page Intro'
-            name: 'intro'
-            widget: 'markdown'
-            file: "_includes/adventures/page-intro.md"
-          - label: 'Adventure Summaries'
-            name: 'adventures'
-            widget: 'list'
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Available - is this activity currently available"
-                name: "available"
-                widget: "boolean"
-              - label: "Visible - do you want this to be visible on the site"
-                name: "visible"
-                widget: "boolean"
-                default: false
-              - label: "Stag & Hen - show this on the stag and hen page"
-                name: "stag-hen"
-                widget: "boolean"
-                default: false
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Available - is this activity currently available"
+            name: "available"
+            widget: "boolean"
+          - label: "Visible - do you want this to be visible on the site"
+            name: "visible"
+            widget: "boolean"
+            default: false
+          - label: "Stag & Hen - show this on the stag and hen page"
+            name: "stag-hen"
+            widget: "boolean"
+            default: false
 
 
 

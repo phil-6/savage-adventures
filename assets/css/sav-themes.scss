@@ -62,11 +62,11 @@ $light-gradient-blue: linear-gradient(to bottom, $white, #99e9ff);
 $light-gradient-purple: linear-gradient(to bottom, #8E2DE2, $purple-medium);
 $light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
 $light-gradient-green: linear-gradient(to bottom, #43C6AC, $green);
-$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow, );
+$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow,);
 $light-background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
 
-$dark-gradient-purple: linear-gradient(to bottom, $purple-deep, $purple-medium, #8E2DE2 );
-$dark-gradient-pink: linear-gradient(170deg, #0e182a, #b91d73 );
+$dark-gradient-purple: linear-gradient(to bottom, $purple-deep, $purple-medium, #8E2DE2);
+$dark-gradient-pink: linear-gradient(170deg, #0e182a, #b91d73);
 $dark-gradient-green: linear-gradient(to bottom, $green-black, $green-dark, $green);
 
 
@@ -104,6 +104,7 @@ body {
 
   a {
     color: $ink;
+
     &.nav-link {
       font-weight: 600;
     }
@@ -212,6 +213,7 @@ body {
     button#theme-toggle {
       background: none;
       color: $ink;
+
       &:hover {
         background: $ink;
         color: $red-orange
@@ -330,6 +332,7 @@ body {
     button#theme-toggle {
       background: $savage-bg;
       color: $white-transparent;
+
       #theme-label {
         color: $white;
         font-weight: 400;
@@ -362,7 +365,7 @@ body {
     }
 
     &.training {
-      background: $light-gradient-green  fixed;
+      background: $light-gradient-green fixed;
     }
 
     &.corporate {

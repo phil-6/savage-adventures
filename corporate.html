@@ -4,5 +4,9 @@ title: Team Building
 tagline: Enhance your team
 bodyclass: corporate
 ---
-{% include corporate/page-intro.html %}
+<section class="container-fluid page-intro">
+    {% capture page-intro %}{% include corporate/page-intro.md%}{% endcapture %}
+    {{ page-intro | markdownify }}
+    <p>For more information please <a href="#bookNowModal" class="" data-toggle="modal" data-target="#bookNowModal">Contact Us</a></p>
+</section>
 {% include corporate/page-content.html %}

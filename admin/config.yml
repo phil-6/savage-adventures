@@ -7,8 +7,8 @@ local_backend: true
 
 media_folder: 'assets/images/'
 collections:
-  - name: 'Pages'
-    label: 'Pages'
+  - name: 'Config'
+    label: 'Config'
     editor:
       preview: true
     files:
@@ -65,29 +65,43 @@ collections:
         name: 'intro'
         file: 'adventures.html'
         fields:
-          - { name: intro, label: 'Page Intro', widget: markdown }
-      - label: 'Summaries'
+          - { name: intro, label: 'Page Intro', widget: 'markdown' }
+      - label: 'Adventures'
         name: 'adventures'
+        file: '_data/adventures.yml'
         editor:
           preview: false
-        file: 'data/adventures.yml'
-        widget: list
         fields:
-          - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Description', name: 'description', widget: 'text' }
-          - label: 'Available - is this activity currently available'
-            name: 'available'
-            widget: 'boolean'
-          - label: 'Visible - do you want this to be visible on the site'
-            name: 'visible'
-            widget: 'boolean'
-            default: false
-          - label: 'Stag & Hen - show this on the stag and hen page'
-            name: 'stag-hen'
-            widget: 'boolean'
-            default: false
+          - label: 'Summaries'
+            name: 'adventures'
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+              - label: 'Available - is this activity currently available'
+                name: 'available'
+                widget: 'boolean'
+              - label: 'Visible - do you want this to be visible on the site'
+                name: 'visible'
+                widget: 'boolean'
+                default: false
+              - label: 'Stag & Hen - show this on the stag and hen page'
+                name: 'stag-hen'
+                widget: 'boolean'
+                default: false
 
+  - label: 'Corporate'
+    name: 'corporate'
+    description: 'Corporate page'
+    editor:
+      preview: false
+    files:
+      - label: 'Page Intro'
+        name: 'intro'
+        file: '_includes/corporate/page-intro.md'
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
 
 

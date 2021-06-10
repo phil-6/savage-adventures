@@ -67,21 +67,14 @@ h5 {
     font-weight: 400;
     font-size: 1rem;
 }
-a {
-    color: var(--ink);
-}
-a:focus, a:hover {
-    text-decoration: none;
-    color: var(--ink-light);
-}
+
 html {
     /*height: 100%;*/
 }
 body {
     /*height: 100%;*/
     font-family: 'raleway', sans-serif;;
-    background: var(--savage-bg);
-    color: var(--ink);
+
 }
 header {
     /*height: 100%;*/
@@ -90,31 +83,6 @@ header {
     /*background-image: url("../images/Background.bmp");*/
     background-size:cover;
 }
-.btn-primary{
-    background-color: var(--blue-transparent);
-    border-color: var(--blue-transparent);
-}
-.btn-primary:hover{
-    background-color: var(--blue);
-    border-color: var(--blue);
-}
-.btn-orange{
-    background-color: var(--red-orange-transparent);
-    border-color: var(--red-orange-transparent);
-    color: var(--white);
-}
-.btn-orange:hover{
-    background-color: var(--red-orange);
-    border-color: var(--red-orange);
-}
-.btn-green{
-    background-color: var(--green-transparent);
-    border-color: var(--green-transparent);
-}
-.btn-green:hover{
-    background-color: var(--green);
-    border-color: var(--green);
-}
 
 .site-logo {
     max-height: 260px;
@@ -122,31 +90,17 @@ header {
 }
 .social-links, .contact-links {
     padding-top: 20px;
+    display: flex;
+
 }
 .social-link {
     padding-left: 5px;
     padding-right: 5px;
 }
 @media (max-width: 576px){
-     .contact-links{
+    .contact-links{
         display: none;
     }
-}
-.social-tripadvisor:hover{
-    color: #00af87;
-}
-.social-facebook:hover{
-    color: #3b5998;
-}
-.social-twitter:hover{
-    color: #1da1f2;
-}
-.social-instagram:hover{
-    color: #003569;
-    opacity: .5;
-}
-.social-youtube:hover{
-    color: #ff0000;
 }
 
 .quick-links .card {
@@ -225,13 +179,10 @@ header {
 .page-intro, .page-info{
     max-width: 900px;
     text-align: justify;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.3rem;
-    color: white;
 }
-.our-team {
-    background: var(--blue-pink-gradient) fixed;
-}
+
 .our-team .page-content{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -240,8 +191,6 @@ header {
     max-width: 360px;
     min-width: 320px;
     margin: 15px;
-    color: white;
-    background: var(--savage-bg-to-top);
 }
 @media (max-width: 576px){
     .our-team .page-content{
@@ -277,20 +226,6 @@ header {
 .our-team .card.beckii {
     background: var(--light-gradient-pink);
 }*/
-
-.stag-hen {
-    background: var(--yellow-gradient2) fixed;
-}
-.training {
-    background: var(--blue-green-gradient) fixed;
-}
-.corporate {
-    background: var(--blue-gradient2) fixed;
-}
-.contact-us {
-    background: var(--red-gradient2) fixed;
-}
-
 
 .book-now-button, .find-out-more-button {
     color: var(--white);

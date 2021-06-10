@@ -1,0 +1,232 @@
+/* theme colours */
+/*f7ff00*/
+body button#theme-toggle {
+  display: inline-block;
+  transition: all 3s;
+  border-radius: 10rem;
+  line-height: 2.6;
+}
+body button#theme-toggle:hover {
+  box-shadow: none;
+  transition: all 0.3s;
+  border-radius: 1.8rem;
+}
+body button#theme-toggle #theme-label {
+  display: inline-block;
+  max-width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+}
+body button#theme-toggle #theme-label.show-label {
+  margin-left: 0.5rem;
+  max-width: 11rem;
+  transition: all 0.5s ease-in-out;
+}
+body a {
+  color: #000021;
+}
+body a.nav-link {
+  font-weight: 600;
+}
+body a:focus, body a:hover {
+  text-decoration: none;
+  color: #606074;
+}
+body a.social-link {
+  color: #000021;
+}
+body a.social-tripadvisor:hover {
+  color: #00af87;
+}
+body a.social-facebook:hover {
+  color: #3b5998;
+}
+body a.social-twitter:hover {
+  color: #1da1f2;
+}
+body a.social-instagram:hover {
+  color: #003569;
+  opacity: 0.5;
+}
+body a.social-youtube:hover {
+  color: #ff0000;
+}
+body .quick-links .card.about-us {
+  background: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff);
+}
+body .quick-links .card.corporate {
+  background: linear-gradient(to bottom left, #00B4DB, #0083B0);
+}
+body .quick-links .card.stag-hen {
+  background: linear-gradient(10deg, #f0ac00, #db36a4);
+}
+body .quick-links .card.training {
+  background: linear-gradient(to bottom, #18b600, #00c8ff);
+}
+body .quick-links .card.contact-us {
+  background: linear-gradient(170deg, #fe8c00, #f83600);
+}
+body .quick-links a {
+  color: #f6f8f9;
+}
+body .quick-links a:hover {
+  opacity: 0.7;
+}
+body .btn-primary {
+  background-color: #00c8ffcc;
+  border-color: #00c8ffcc;
+}
+body .btn-primary:hover {
+  background-color: #00c8ff;
+  border-color: #00c8ff;
+}
+body .btn-orange {
+  background-color: #f83600cc;
+  border-color: #f83600cc;
+  color: #f6f8f9;
+}
+body .btn-orange:hover {
+  background-color: #f83600;
+  border-color: #f83600;
+}
+body .btn-green {
+  background-color: #18b600cc;
+  border-color: #18b600cc;
+}
+body .btn-green:hover {
+  background-color: #18b600;
+  border-color: #18b600;
+}
+body.multi-mode {
+  background: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+  color: #000021;
+}
+body.multi-mode button#theme-toggle {
+  background: none;
+  color: #000021;
+}
+body.multi-mode button#theme-toggle:hover {
+  background: #000021;
+  color: #f83600;
+}
+body.multi-mode button#theme-toggle .multi {
+  display: none;
+}
+body.multi-mode button#theme-toggle .light {
+  display: none;
+}
+body.multi-mode button#theme-toggle .dark {
+  display: inline-block;
+}
+body.multi-mode .page-intro, body.multi-mode .page-info {
+  color: #f6f8f9;
+}
+body.multi-mode.our-team {
+  background: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff) fixed;
+}
+body.multi-mode.our-team .card {
+  color: white;
+  background: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+}
+body.multi-mode.stag-hen {
+  background: linear-gradient(10deg, #f0ac00, #db36a4) fixed;
+}
+body.multi-mode.training {
+  background: linear-gradient(to bottom, #18b600, #00c8ff) fixed;
+}
+body.multi-mode.corporate {
+  background: linear-gradient(to bottom left, #00B4DB, #0083B0) fixed;
+}
+body.multi-mode.contact-us {
+  background: linear-gradient(170deg, #fe8c00, #f83600) fixed;
+}
+body.dark-mode {
+  background: #000021;
+  color: #f6f8f9;
+}
+body.dark-mode button#theme-toggle {
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
+  color: #000021;
+}
+body.dark-mode button#theme-toggle .multi {
+  display: none;
+}
+body.dark-mode button#theme-toggle .light {
+  display: inline-block;
+}
+body.dark-mode button#theme-toggle .dark {
+  display: none;
+}
+body.dark-mode a {
+  color: #f6f8f9;
+}
+body.dark-mode a:focus, body.dark-mode a:hover {
+  text-decoration: none;
+  color: #606074;
+}
+body.dark-mode .page-intro, body.dark-mode .page-info {
+  color: #f6f8f9;
+}
+body.dark-mode.our-team {
+  background: linear-gradient(to bottom, #191654, #4A00E0, #8E2DE2) fixed;
+}
+body.dark-mode.our-team .card {
+  color: white;
+  background: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+}
+body.dark-mode.stag-hen {
+  background: linear-gradient(170deg, #0e182a, #b91d73) fixed;
+}
+body.dark-mode.training {
+  background: linear-gradient(to bottom, #061700, #007200, #18b600) fixed;
+}
+body.dark-mode.corporate {
+  background: #05285a;
+}
+body.dark-mode.contact-us {
+  background: linear-gradient(to bottom, #970000, #800000, #680000) fixed;
+}
+body.light-mode {
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
+  color: #000021;
+}
+body.light-mode button#theme-toggle {
+  background: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+  color: #ffffff88;
+}
+body.light-mode button#theme-toggle #theme-label {
+  color: #f6f8f9;
+  font-weight: 400;
+}
+body.light-mode button#theme-toggle .multi {
+  display: inline-block;
+}
+body.light-mode button#theme-toggle .light {
+  display: none;
+}
+body.light-mode button#theme-toggle .dark {
+  display: none;
+}
+body.light-mode.our-team {
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9) fixed;
+}
+body.light-mode.our-team .card {
+  color: #000021;
+  background: linear-gradient(to bottom, #ef32d9, #89fffd);
+}
+body.light-mode.stag-hen {
+  background: linear-gradient(to bottom, #ef32d9, #89fffd) fixed;
+}
+body.light-mode.training {
+  background: linear-gradient(to bottom, #43C6AC, #18b600) fixed;
+}
+body.light-mode.corporate {
+  background: linear-gradient(to bottom, #f6f8f9, #99e9ff) fixed;
+}
+body.light-mode.contact-us {
+  background: linear-gradient(to bottom, #f6f8f9, #c8bedc 80%, #f0ac00) fixed;
+}
+
+/*# sourceMappingURL=sav-themes.css.map */

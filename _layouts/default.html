@@ -57,10 +57,15 @@
     <!-- Netlify Auth -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+
+
     <!-- StyleSheet -->
     <link rel="stylesheet"
           type="text/css"
           href="/assets/css/sav-main.css"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="/assets/css/sav-themes.css"/>
 </head>
 <body class="{{ page.bodyclass }}">
 {% include header.html %}
@@ -78,5 +83,7 @@
         });
     }
 </script>
+<!-- Theme Toggle -->
+<script src="/assets/js/themeToggle.js"> </script>
 </body>
 </html>

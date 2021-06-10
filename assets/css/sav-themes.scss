@@ -1,0 +1,377 @@
+/* theme colours */
+$dark: #0e182a;
+$ink-dark: #05285a;
+$light: #dfecf1;
+$ink-light: #ece9e6;
+
+$white: #f6f8f9;
+$gray: #dfecf1;
+$dark-gray: #495087;
+$medium-gray: #c8bedc;
+
+
+$ink: #000021;
+$ink-light: #606074;
+$white: #f6f8f9;
+$white-transparent: #ffffff88;
+$black-transparent: #00002166;
+
+$purple-deep: #191654;
+$purple-medium: #4A00E0;
+
+$blue: #00c8ff;
+$blue-transparent: #00c8ffcc;
+$blue-dark: #174a7a;
+$blue-gradient: linear-gradient(to bottom, #5184b4, $blue-dark, #002050);
+$blue-gradient2: linear-gradient(to bottom left, #00B4DB, #0083B0);
+
+$green: #18b600;
+$green-transparent: #18b600cc;
+$green-dark: #007200;
+$green-black: #061700;
+$green-gradient: linear-gradient(to bottom, $green, #008f00, $green-dark);
+$green-gradient2: linear-gradient(to bottom, #52c234, $green-black);
+
+$pink: #f953c6;
+$pink-dark: #b91d73;
+$pink-gradient: linear-gradient(to bottom, #f953c6, #b91d73);
+$pink-gradient2: radial-gradient(#ff6a00, #ee0979);
+
+$yellow: #f0ac00;
+$yellow-dark: #d08d00;
+$yellow-gradient: linear-gradient(to bottom, $yellow, $yellow-dark);
+$yellow-gradient2: linear-gradient(10deg, $yellow, #db36a4); /*f7ff00*/
+
+$red: #970000;
+$red-dark: #680000;
+$red-orange: #f83600;
+$red-orange-transparent: #f83600cc;
+$red-gradient: linear-gradient(to bottom, $red, #800000, $red-dark);
+$red-gradient2: linear-gradient(170deg, #fe8c00, $red-orange);
+
+
+$blue-pink-gradient: linear-gradient(to top, $pink 20%, #8E2DE2, $blue);
+$blue-green-gradient: linear-gradient(to bottom, $green, $blue);
+
+
+$savage-bg-fallback: $blue;
+$savage-bg: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, $blue 100%);
+$savage-bg-to-top: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, $blue 100%);
+
+$light-gradient-blue: linear-gradient(to bottom, $white, #99e9ff);
+$light-gradient-purple: linear-gradient(to bottom, #8E2DE2, $purple-medium);
+$light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
+$light-gradient-green: linear-gradient(to bottom, #43C6AC, $green);
+$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow, );
+$light-background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
+
+$dark-gradient-purple: linear-gradient(to bottom, $purple-deep, $purple-medium, #8E2DE2 );
+$dark-gradient-pink: linear-gradient(170deg, #0e182a, #b91d73 );
+$dark-gradient-green: linear-gradient(to bottom, $green-black, $green-dark, $green);
+
+
+body {
+
+  // Defaults
+  button#theme-toggle {
+    display: inline-block;
+    transition: all 3s;
+    border-radius: 10rem;
+    line-height: 2.6;
+
+    &:hover {
+      box-shadow: none;
+      transition: all 0.3s;
+      border-radius: 1.8rem;
+    }
+
+    #theme-label {
+      display: inline-block;
+      max-width: 0;
+      margin-left: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all .5s ease-in-out;
+
+      &.show-label {
+        margin-left: 0.5rem;
+        max-width: 11rem;
+        transition: all .5s ease-in-out;
+
+      }
+    }
+  }
+
+  a {
+    color: $ink;
+    &.nav-link {
+      font-weight: 600;
+    }
+
+    &:focus, &:hover {
+      text-decoration: none;
+      color: $ink-light;
+    }
+
+    &.social-link {
+      color: $ink;
+    }
+
+    &.social-tripadvisor:hover {
+      color: #00af87;
+    }
+
+    &.social-facebook:hover {
+      color: #3b5998;
+    }
+
+    &.social-twitter:hover {
+      color: #1da1f2;
+    }
+
+    &.social-instagram:hover {
+      color: #003569;
+      opacity: .5;
+    }
+
+    &.social-youtube:hover {
+      color: #ff0000;
+    }
+  }
+
+  .quick-links {
+    .card {
+      &.about-us {
+        background: $blue-pink-gradient;
+      }
+
+      &.corporate {
+        background: $blue-gradient2;
+      }
+
+      &.stag-hen {
+        background: $yellow-gradient2;
+      }
+
+      &.training {
+        background: $blue-green-gradient;
+      }
+
+      &.contact-us {
+        background: $red-gradient2;
+      }
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .btn-primary {
+    background-color: $blue-transparent;
+    border-color: $blue-transparent;
+
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+
+  .btn-orange {
+    background-color: $red-orange-transparent;
+    border-color: $red-orange-transparent;
+    color: $white;
+
+    &:hover {
+      background-color: $red-orange;
+      border-color: $red-orange;
+    }
+  }
+
+  .btn-green {
+    background-color: $green-transparent;
+    border-color: $green-transparent;
+
+    &:hover {
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+
+
+  // Colourful mode
+  &.multi-mode {
+    background: $savage-bg;
+    color: $ink;
+
+    // Button Icon
+    button#theme-toggle {
+      background: none;
+      color: $ink;
+      &:hover {
+        background: $ink;
+        color: $red-orange
+      }
+
+      .multi {
+        display: none;
+      }
+
+      .light {
+        display: none;
+      }
+
+      .dark {
+        display: inline-block;
+      }
+    }
+
+    .page-intro, .page-info {
+      color: $white;
+    }
+
+    &.our-team {
+      background: $blue-pink-gradient fixed;
+
+      .card {
+        color: white;
+        background: $savage-bg-to-top;
+      }
+    }
+
+    &.stag-hen {
+      background: $yellow-gradient2 fixed;
+    }
+
+    &.training {
+      background: $blue-green-gradient fixed;
+    }
+
+    &.corporate {
+      background: $blue-gradient2 fixed;
+    }
+
+    &.contact-us {
+      background: $red-gradient2 fixed;
+    }
+  }
+
+  // Dark Mode
+  &.dark-mode {
+    background: $ink;
+    color: $white;
+
+    button#theme-toggle {
+      background: $light-background;
+      color: $ink;
+
+      .multi {
+        display: none;
+      }
+
+      .light {
+        display: inline-block;
+      }
+
+      .dark {
+        display: none;
+      }
+    }
+
+    a {
+      color: $white;
+
+      &:focus, &:hover {
+        text-decoration: none;
+        color: $ink-light;
+      }
+
+    }
+
+    .page-intro, .page-info {
+      color: $white;
+    }
+
+    &.our-team {
+      background: $dark-gradient-purple fixed;
+
+      .card {
+        color: white;
+        background: $savage-bg-to-top;
+      }
+    }
+
+    &.stag-hen {
+      background: $dark-gradient-pink fixed;
+    }
+
+    &.training {
+      background: $dark-gradient-green fixed;
+    }
+
+    &.corporate {
+      background: $ink-dark;
+    }
+
+    &.contact-us {
+      background: $red-gradient fixed;
+    }
+  }
+
+  // Light Mode
+  &.light-mode {
+    background: $light-background;
+    color: $ink;
+
+    button#theme-toggle {
+      background: $savage-bg;
+      color: $white-transparent;
+      #theme-label {
+        color: $white;
+        font-weight: 400;
+      }
+
+      .multi {
+        display: inline-block;
+      }
+
+      .light {
+        display: none;
+      }
+
+      .dark {
+        display: none;
+      }
+    }
+
+    &.our-team {
+      background: $light-background fixed;
+
+      .card {
+        color: $ink;
+        background: $light-gradient-pink;
+      }
+    }
+
+    &.stag-hen {
+      background: $light-gradient-pink fixed;
+    }
+
+    &.training {
+      background: $light-gradient-green  fixed;
+    }
+
+    &.corporate {
+      background: $light-gradient-blue fixed;
+    }
+
+    &.contact-us {
+      background: $light-gradient-yellow fixed;
+    }
+
+  }
+}

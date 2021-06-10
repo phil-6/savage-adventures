@@ -87,6 +87,7 @@ header {
 .site-logo {
     max-height: 260px;
     object-fit: contain;
+
 }
 .social-links, .contact-links {
     padding-top: 20px;
@@ -98,7 +99,7 @@ header {
     padding-right: 5px;
 }
 @media (max-width: 576px){
-    .contact-links{
+    .contact-links-col{
         display: none;
     }
 }

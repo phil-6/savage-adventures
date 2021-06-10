@@ -4,5 +4,15 @@ title: Outdoor Activities Wales
 tagline: Give them the send off they deserve
 bodyclass: stag-hen
 ---
-{% include stag-hen/page-intro.html %}
+<section class="container-fluid page-intro">
+    {% capture page-intro %}{% include stag-hen/page-intro.md%}{% endcapture %}
+    {{ page-intro | markdownify }}
+    <div class="row text-center">
+        <div class="col">
+            <button type="button" class="book-now-button btn btn-primary" data-toggle="modal" data-target="#bookNowModal">
+                Book Your Adventure Now!
+            </button>
+        </div>
+    </div>
+</section>
 {% include stag-hen/adventures.liquid %}

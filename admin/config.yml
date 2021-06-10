@@ -103,6 +103,18 @@ collections:
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - label: 'Stag-hen'
+    name: 'stag-hen'
+    description: 'Stag and Hen page'
+    editor:
+      preview: false
+    files:
+      - label: 'Page Intro'
+        name: 'intro'
+        file: '_includes/stag-hen/page-intro.md'
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
 
 
 

@@ -14,8 +14,9 @@ adventures:
     stag-hen: true
 
   - name: Climbing
-    image: canyoning-waterfall-group.jpg
-    description: Gain a new and unique perspective on the world famous <strong><a href="https://www.breconbeacons.org/things-to-do/attractions/natural/visiting-waterfall-country/walking-trails">Waterfall Country</a></strong> in the Brecon Beacons, see the rivers from an entirely new angle. Spend an action packed day climbing through waterfalls, exploring behind the curtain and jumping into deep plunge pools. Nature’s own water slides and rapids put waterparks all over the world to shame.
+    image: guide-pete-climbing.jpg
+    description: |
+      Now an olympic sport, climbing is in the spotlight and is rapidly growing in popularity. Climbing is one of the most thrilling, rewarding and unique ways to adventure. Experience the beautiful Welsh national coastline of Pembrokeshire and the Gower Peninsula from a new, vertical, perspective. If you’re new to climbing and want to give it a go or if you’ve climbed before and want to foray into the world of trad, get in touch and we’ll build the day for you
     available: true
     visible: true
     stag-hen: true

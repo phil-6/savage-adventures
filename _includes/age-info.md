@@ -1,1 +1,1 @@
-As safety is our main priority any participants aged 10-17 must be accompanied by a responsible adult over 18. Unfortunately, we are currently unable to accept any participants under the age of 10.
+We are an AALA Approved Centre, this allows us to take out kids groups of any age, however as safety is our main priority certain activities have minimum age restrictions. If your interested in booking with children -17yr old please getting touch to confirm the activity your are booking onto is suitable.

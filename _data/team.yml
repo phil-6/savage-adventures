@@ -1,6 +1,6 @@
 team_members:
   - name: Peter Savage
-    image: /assets/images/189a1143.jpg
+    image: 189a1143.jpg
     job: Owner & Instructor
     bio: Pete's a real outdoor enthusiast! Whatever the weather he's out in it, even
       on the rainy days. Pete started the company up in 2015, Pete set eyes on
@@ -14,6 +14,14 @@ team_members:
     job: Head of Security
     bio: In charge of everything security. Will dynamically risk assess any new
       beings approaching groups and determine if they are playful enough.
+    visible: true
+  - name: Craig Ritz
+    job: Development Officer
+    bio: Craig is the lumbering giant of the group, easy to spotted from half a mile
+      away craig is often found tucked up tight half welded into a Sea kayak.
+      Craig has come onboard to improve and develop the educational side to
+      Savage Adventures
+    image: 273149558_10158460805866024_2233738839153048924_n.jpg
     visible: true
   - name: Phil Reynolds
     image: guide-phil-coasteering-point-crop.jpg
@@ -30,10 +38,4 @@ team_members:
       she comes back with a new qualification and even greater enthusiasm for
       adventure.
     visible: true
-  - visible: true
-    name: Craig Ritz
-    bio: Craig is the lumbering giant of the group, easy to spotted from half a mile
-      away craig is often found tucked up tight half welded into a Sea kayak.
-      Craig has come onboard to improve and develop the educational side to
-      Savage Adventures
-    image: /assets/images/273149558_10158460805866024_2233738839153048924_n.jpg
+

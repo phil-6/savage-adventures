@@ -1,5 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+<div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body background-bec">
@@ -33,15 +34,18 @@
                                         <input type="text" name="name" class="form-control name" placeholder="Name *">
                                     </div>
                                     <div class="col email">
-                                        <input type="email" name="email" class="form-control email" placeholder="Email *">
+                                        <input type="email" name="email" class="form-control email"
+                                               placeholder="Email *">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <input type="text" name="subject" class="form-control" placeholder="Subject">
                                 </div>
                                 <div class="row">
-                                    <textarea name="message" class="form-control message" placeholder="Message"></textarea>
+                                    <textarea name="message" class="form-control message"
+                                              placeholder="Message"></textarea>
                                 </div>
+                                <input type="hidden" name="honeypot">
                                 <div class="row justify-content-center">
                                     <button type="submit" class="btn btn-primary"><em>Send</em></button>
                                 </div>
@@ -60,4 +64,3 @@
         </div>
     </div>
 </div>
-<script data-cfasync="false" type="text/javascript" src="/assets/js/form-submission-handler.js"></script>

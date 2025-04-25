@@ -46,7 +46,7 @@ adventures:
       through lush landscapes, tackling gentle rapids, or embracing the salt
       spray of coastal waters. All you need is a sense of adventure — we’ll take
       care of the rest.
-    available: true
+    available: false
     visible: true
     stag-hen: false
   - name: Walking

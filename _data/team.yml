@@ -21,7 +21,7 @@ team_members:
       away. Craig is often found tucked up tight, half welded into a Sea kayak.
       Craig has come onboard to improve and develop the educational side of
       Savage Adventures.
-    image: 273149558_10158460805866024_2233738839153048924_n.jpg
+    image: /assets/images/273149558_10158460805866024_2233738839153048924_n.jpg
     visible: true
   - name: Phil Reynolds
     image: guide-phil-coasteering-point-crop.jpg
@@ -38,4 +38,14 @@ team_members:
       she comes back with a new qualification and even greater enthusiasm for
       adventure.
     visible: true
-
+  - visible: true
+    name: Simon Bowen
+    image: /assets/images/guide-simon-view.jpg
+    bio: Simon is the driving force behind the evolution of our adventures. A
+      passionate waterman at heart, he’s rarely happier than when he’s out on
+      his paddleboard, exploring hidden coves and winding riverways. As our
+      Development Officer, Simon brings boundless energy and creativity to the
+      team, always seeking out new experiences to share with others. His love
+      for stand-up paddleboarding and the outdoors shines through in everything
+      he does, ensuring that every new adventure is crafted with care,
+      excitement, and a deep respect for nature.

@@ -4,7 +4,7 @@
 <div id="mainCarousel" class="carousel slide py-4" data-bs-ride="true" data-interval="5000">
     <ol class="carousel-indicators">
         {% for image in header_images %}
-            <li data-target="#mainCarousel" data-bs-target="#mainCarousel" data-bs-slide-to="{{ forloop.index0 }}"
+            <li data-bs-target="#mainCarousel" data-bs-slide-to="{{ forloop.index0 }}"
                 class="{% if forloop.first == true %}active{% endif %}"></li>
         {% endfor %}
     </ol>

@@ -120,9 +120,9 @@
 
 // turnstile
 window.onTurnstileSuccess = function(token) {
-    // Find the form containing the Turnstile widget
-    const disabledButton = document.querySelector('button[type="submit"][disabled]');
-    if (disabledButton) {
-        disabledButton.disabled = false;
-    }
+    const disabledSubmitButtons = document.querySelectorAll('button[type="submit"][disabled]');
+    disabledSubmitButtons.forEach(function(button) {
+        button.disabled = false;
+    });
 };
+

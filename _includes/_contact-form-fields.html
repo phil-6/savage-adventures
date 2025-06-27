@@ -1,0 +1,31 @@
+<!-- _includes/contact-form-fields.html -->
+<div class="form-elements">
+    <div class="row">
+        <div class="col name">
+            <input type="text" name="name" class="form-control name"
+                   placeholder="Name *" required>
+        </div>
+        <div class="col email">
+            <input type="email" name="email" class="form-control email"
+                   placeholder="Email *" required>
+        </div>
+    </div>
+    <div class="row">
+        <input type="text" name="subject" class="form-control"
+               placeholder="Subject" required>
+    </div>
+    <div class="row">
+        <textarea name="message" class="form-control message"
+                  placeholder="Message" required></textarea>
+    </div>
+    <input type="hidden" name="honeypot">
+    <div class="cf-turnstile"
+         data-sitekey="3x00000000000000000000FF"
+         data-size="flexible"
+         data-callback="onTurnstileSuccess"></div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary" disabled>
+            <em>Send</em>
+        </button>
+    </div>
+</div>

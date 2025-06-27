@@ -371,9 +371,12 @@ header {
 
 .modal .close {
     color: var(--white);
-    font-size: 24px;
+    font-size: 48px;
+    line-height: 8px;
     opacity: 1;
     z-index: 2;
+    background: none;
+    border: none;
 }
 
 .modal .close:hover {

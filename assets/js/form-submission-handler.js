@@ -72,6 +72,7 @@
         }
 
         disableAllButtons(form);
+        showSpinner(form);
         let url = form.action;
         let xhr = new XMLHttpRequest();
         xhr.open('POST', url);
@@ -81,6 +82,7 @@
             console.log(xhr.status, xhr.statusText);
             console.log(xhr.responseText);
             form.reset();
+            hideSpinner(form);
             let formElements = form.querySelector(".form-elements");
             if (formElements) {
                 formElements.style.display = "none"; // hide form
@@ -113,6 +115,30 @@
         let buttons = form.querySelectorAll("button");
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
+        }
+    }
+
+    function showSpinner(form) {
+        let spinner = form.querySelector('.form-spinner');
+        if (spinner) {
+            spinner.classList.remove('d-none');
+            spinner.classList.add('d-inline-block');
+        }
+        let formElements = form.querySelector('.form-elements');
+        if (formElements) {
+            formElements.classList.add('d-none');
+        }
+    }
+
+    function hideSpinner(form) {
+        let spinner = form.querySelector('.form-spinner');
+        if (spinner) {
+            spinner.classList.add('d-none');
+            spinner.classList.remove('d-inline-block');
+        }
+        let formElements = form.querySelector('.form-elements');
+        if (formElements) {
+            formElements.classList.remove('d-none');
         }
     }
 })();

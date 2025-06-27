@@ -21,8 +21,14 @@
     <input type="hidden" name="honeypot">
     {% include cf-turnstile.html %}
     <div class="row justify-content-center">
-        <button type="submit" class="btn btn-primary" disabled>
+        <button type="submit" class="btn btn-primary submit-button" disabled>
             <em>Send</em>
         </button>
+    </div>
+</div>
+<div class="row">
+    <div class="form-spinner col text-center d-none">
+        <h3>Please hold while we send your message</h3>
+        <i class="fas fa-spinner fa-spin fa-4x"></i>
     </div>
 </div>

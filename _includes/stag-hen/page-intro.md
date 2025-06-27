@@ -9,4 +9,3 @@ back again via minibus
 
 ### Group organisers!
 **Stag or hen goes free with parties of more than 10 people**
-

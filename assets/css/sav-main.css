@@ -81,21 +81,17 @@ body {
 header {
     /*height: 100%;*/
     width: 100%;
-
-    /*background-image: url("../images/Background.bmp");*/
     background-size: cover;
 }
 
 .site-logo {
     max-height: 260px;
     object-fit: contain;
-
 }
 
 .social-links, .contact-links {
     padding-top: 20px;
     display: flex;
-
 }
 
 .social-link {
@@ -185,7 +181,6 @@ header {
 }
 
 .upcoming-events h1 {
-
 }
 
 .upcoming-events .card, .our-team .card {
@@ -479,7 +474,6 @@ header {
         margin-top: 5px;
     }
 }
-
 
 /*Contact Us Form*/
 @media (min-width: 576px) {

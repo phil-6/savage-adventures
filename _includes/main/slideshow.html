@@ -1,13 +1,12 @@
 <!--Main Slideshow-->
+<!-- To add slides to the slideshow, add a new image to the assets/images/header_images directory -->
 {% assign header_images = site.static_files | where: 'header_image', true %}
-<div id="mainCarousel" class="carousel slide py-4" data-ride="carousel" data-interval="5000">
+<div id="mainCarousel" class="carousel slide py-4" data-bs-ride="true" data-interval="5000">
     <ol class="carousel-indicators">
-        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#mainCarousel" data-slide-to="1"></li>
-        <li data-target="#mainCarousel" data-slide-to="3"></li>
-        <li data-target="#mainCarousel" data-slide-to="4"></li>
-        <li data-target="#mainCarousel" data-slide-to="5"></li>
-        <li data-target="#mainCarousel" data-slide-to="6"></li>
+        {% for image in header_images %}
+            <li data-target="#mainCarousel" data-bs-target="#mainCarousel" data-bs-slide-to="{{ forloop.index0 }}"
+                class="{% if forloop.first == true %}active{% endif %}"></li>
+        {% endfor %}
     </ol>
     <div class="carousel-inner">
         {% for image in header_images %}
@@ -16,11 +15,11 @@
             </div>
         {% endfor %}
     </div>
-    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#mainCarousel" role="button" data-bs-target="#mainCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>

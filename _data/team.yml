@@ -2,7 +2,8 @@ team_members:
   - name: Peter Savage
     image: 189a1143.jpg
     job: Owner & Instructor
-    bio: Pete's a real outdoor enthusiast! Whatever the weather he's out in it, even
+    bio: |
+      Pete's a real outdoor enthusiast! Whatever the weather he's out in it, even
       on the rainy days. Pete started the company up in 2015, Pete set eyes on
       changing the way the outdoors is enjoyed and with his passion for the
       outdoors and stubbornness to give in the company was founded. Pete
@@ -17,16 +18,18 @@ team_members:
     visible: true
   - name: Craig Ritz
     job: Development Officer
-    bio: Craig is the lumbering giant of the group, easy to spotted from half a mile
+    bio: |
+      Craig is the lumbering giant of the group, easy to spotted from half a mile
       away. Craig is often found tucked up tight, half welded into a Sea kayak.
       Craig has come onboard to improve and develop the educational side of
       Savage Adventures.
     image: /assets/images/273149558_10158460805866024_2233738839153048924_n.jpg
-    visible: true
+    visible: false
   - name: Phil Reynolds
     image: guide-phil-coasteering-point-crop.jpg
     job: Instructor
-    bio: To get away from his day job behind a desk as a software engineer Phil
+    bio: |
+      To get away from his day job behind a desk as a software engineer, Phil
       turns to his evening and weekend job as one of our adventure guides. He
       has a real passion of encouraging people to find their limits and take a
       step past them.
@@ -34,18 +37,19 @@ team_members:
   - name: Beckii Waters
     image: guide-bex.jpg
     job: Instructor
-    bio: Beckii likes nothing more than being outside. Whenever she goes on holiday
+    bio: |
+      Beckii likes nothing more than being outside. Whenever she goes on holiday
       she comes back with a new qualification and even greater enthusiasm for
       adventure.
     visible: true
   - visible: true
     name: Simon Bowen
-    image: /assets/images/guide-simon-view.jpg
-    bio: Simon is the driving force behind the evolution of our adventures. A
-      passionate waterman at heart, he’s rarely happier than when he’s out on
-      his paddleboard, exploring hidden coves and winding riverways. As our
-      Development Officer, Simon brings boundless energy and creativity to the
-      team, always seeking out new experiences to share with others. His love
-      for stand-up paddleboarding and the outdoors shines through in everything
-      he does, ensuring that every new adventure is crafted with care,
-      excitement, and a deep respect for nature.
+    image: guide-simon-view.jpg
+    job: Development Officer
+    bio: |
+      A passionate waterman at heart, Simon is rarely happier than when he’s out 
+      on his paddleboard, exploring hidden coves and winding riverways. Simon 
+      brings boundless energy and creativity to the team, always seeking out new
+      experiences to share with others. His love for the outdoors shines through 
+      in everythinghe does, ensuring that every new adventure is crafted with 
+      care, excitement, and a deep respect for nature.

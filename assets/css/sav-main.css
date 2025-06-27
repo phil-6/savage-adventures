@@ -190,7 +190,7 @@ header {
 .our-team .card {
     max-width: 360px;
     min-width: 320px;
-    margin: 15px;
+    margin: 8px;
 }
 @media (max-width: 576px){
     .our-team .page-content{
@@ -206,7 +206,7 @@ header {
     text-align: center;
 }
 .our-team .card h1, .our-team .card h3, .our-team .card p {
-    margin: 15px;
+    margin: 8px;
 }
 .our-team .card img {
     max-height: 250px;

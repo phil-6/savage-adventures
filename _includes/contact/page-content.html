@@ -22,8 +22,14 @@
                         <textarea name="message" class="form-control message" placeholder="Message"></textarea>
                     </div>
                     <input type="hidden" name="honeypot">
+                    <div class="cf-turnstile"
+                         data-sitekey="3x00000000000000000000FF"
+                         data-size="flexible"
+                         data-callback="onTurnstileSuccess"></div>
                     <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-primary"><em>Send</em></button>
+                        <button type="submit" class="btn btn-primary" disabled>
+                            <em>Send</em>
+                        </button>
                     </div>
                 </div>
                 <div style="display:none" class="thankyou_message">

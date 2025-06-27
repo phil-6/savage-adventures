@@ -117,3 +117,12 @@
         }
     }
 })();
+
+// turnstile
+window.onTurnstileSuccess = function(token) {
+    // Find the form containing the Turnstile widget
+    const disabledButton = document.querySelector('button[type="submit"][disabled]');
+    if (disabledButton) {
+        disabledButton.disabled = false;
+    }
+};

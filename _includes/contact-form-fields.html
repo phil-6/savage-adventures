@@ -19,10 +19,7 @@
                   placeholder="Message" required></textarea>
     </div>
     <input type="hidden" name="honeypot">
-    <div class="cf-turnstile"
-         data-sitekey="3x00000000000000000000FF"
-         data-size="flexible"
-         data-callback="onTurnstileSuccess"></div>
+    {% include cf-turnstile.html %}
     <div class="row justify-content-center">
         <button type="submit" class="btn btn-primary" disabled>
             <em>Send</em>

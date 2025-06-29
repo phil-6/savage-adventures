@@ -1,7 +1,8 @@
 adventures:
   - name: Canyoning
     image: canyoning-waterfall-group.jpg
-    description: Gain a new and unique perspective on the world famous <strong><a
+    description: >
+      Gain a new and unique perspective on the world famous <strong><a
       href="https://www.breconbeacons.org/things-to-do/attractions/natural/visiting-waterfall-country/walking-trails">Waterfall
       Country</a></strong> in the Brecon Beacons, see the rivers from an
       entirely new angle. Spend an action packed day climbing through
@@ -10,10 +11,14 @@ adventures:
       world to shame.
     available: true
     visible: true
+    find-out-more: true
     stag-hen: true
+    header-images:
+      - header-02-canyoning.png
   - name: Coasteering
     image: coasteering-jump-together.jpg
-    description: Coasteering is defined as “an activity that encompasses movement
+    description: >
+      Coasteering is defined as “an activity that encompasses movement
       along the intertidal zone of a rocky coastline on foot or by swimming,
       without the aid of boats, surf boards or other craft.” Invented 30 years
       ago on the Welsh coastline, coasteering has grown into a global adventure
@@ -21,7 +26,13 @@ adventures:
       wonder that first inspired the sport.
     available: true
     visible: true
+    find-out-more: true
     stag-hen: true
+    header-images:
+      - header-01-coasteering.png
+      - header-12-coasteering.png
+      - header-30-coasteering.png
+      - header-40-coasteering.png
   - name: Climbing
     image: guide-pete-climbing.jpg
     description: >
@@ -34,7 +45,26 @@ adventures:
       build the day for you
     available: true
     visible: true
+    find-out-more: true
     stag-hen: true
+  - name: Surfing
+    image: surfing-1.png
+    description: >
+      Surfing at Rhossili Beach is an experience like no other. With its 
+      expansive golden sands set against a backdrop of dramatic cliffs and 
+      rolling waves, Rhossili offers surfers a pristine playground. Whether 
+      you're catching your first wave or carving a seasoned line, the consistent 
+      swells and stunning scenery make Rhossili Beach a surfer's paradise. Dive 
+      into the rhythm of the ocean and let the iconic Welsh coastline take your 
+      breath away.
+    available: true
+    visible: true
+    find-out-more: false
+    stag-hen: false
+    header-images:
+      - header-08-surfing.png
+      - header-14-surfing.png
+      - header-32-surfing.png
   - name: Sit-on-Top Kayaking
     image: sit-on-top.jpg
     description: >
@@ -46,12 +76,14 @@ adventures:
       through lush landscapes, tackling gentle rapids, or embracing the salt
       spray of coastal waters. All you need is a sense of adventure — we’ll take
       care of the rest.
-    available: false
+    available: true
     visible: true
+    find-out-more: false
     stag-hen: false
-  - name: Walking
+  - name: Guided Walks
     image: walking-mountain-cloud.jpg
-    description: Feeling like you want to keep both feet on the ground, but don’t
+    description: >
+      Feeling like you want to keep both feet on the ground, but don’t
       want to miss out on the spectacular sights and wonders of Wales…? Well,
       fear not, with our walking tours you won’t miss out on any of the action.
       Imagine being stood on the top of some of the best  Mountains in wales and
@@ -59,10 +91,12 @@ adventures:
       below.
     available: true
     visible: true
+    find-out-more: true
     stag-hen: false
   - name: SUP
     image: guide-pete-paddleboard-swim.gif
-    description: Stand Up Paddle Boarding is one of the fastest growing watersports
+    description: >
+      Stand Up Paddle Boarding is one of the fastest growing watersports
       with thousands more people giving it a go each year. We offer the normal
       range of SUP activities such as SUP rental, coaching and guided tours for
       everyone who wants to give this fantastic growing sport a try. But if you
@@ -71,10 +105,14 @@ adventures:
       waterfall.
     available: false
     visible: true
+    find-out-more: false
     stag-hen: false
+    header-images:
+      - header-05-sup.png
   - name: Bushcraft
     image: canyoning-waterfall-group.jpg
     description: Learn to survive like Ray Mears
     available: false
     visible: false
+    find-out-more: false
     stag-hen: false

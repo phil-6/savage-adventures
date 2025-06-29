@@ -22,7 +22,9 @@
                                 Coming Soon
                             </button>
                         {% endif %}
-                        <a class="btn btn-green find-out-more-button" href="/adventures/{{ adventure.name | downcase }}">Find out more</a>
+                        {% if aventure.find-out-more %}
+                            <a class="btn btn-green find-out-more-button" href="/adventures/{{ adventure.name  | replace: ' ', '-' | downcase }}">Find out more</a>
+                        {% endif %}
                     </div>
                     <div class="col-md-5">
                         <img src="../assets/images/{{ adventure.image }}" alt="{{ adventure.name}}">
@@ -52,7 +54,9 @@
                                 Coming Soon
                             </button>
                         {% endif %}
-                        <a class="btn btn-green find-out-more-button" href="/adventures/{{ adventure.name  | replace: ' ', '-' | downcase }}">Find out more</a>
+                        {% if aventure.find-out-more %}
+                            <a class="btn btn-green find-out-more-button" href="/adventures/{{ adventure.name  | replace: ' ', '-' | downcase }}">Find out more</a>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}

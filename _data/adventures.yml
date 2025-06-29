@@ -103,7 +103,7 @@ adventures:
       came here for adventure, we do take things to the next level with mountain
       SUP expeditions and SUP Yoga in the pool underneath a picturesque hidden
       waterfall.
-    available: false
+    available: true
     visible: true
     find-out-more: false
     stag-hen: false

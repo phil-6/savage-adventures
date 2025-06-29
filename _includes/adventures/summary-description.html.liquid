@@ -1,0 +1,18 @@
+<div class="col-md-7 page-info">
+  <p>{{ adventure.description }}</p>
+  {% if adventure.available %}
+    <button type="button" class="book-now-button btn btn-orange"
+            data-bs-toggle="modal"
+            data-bs-target="#bookNowModal">
+      Book Now!
+    </button>
+  {% else %}
+    <button type="button" class="book-now-button btn btn-orange" disabled>
+      Coming Soon
+    </button>
+  {% endif %}
+  {% if adventure.find-out-more %}
+    <a class="btn btn-green find-out-more-button"
+       href="/adventures/{{ adventure.name | replace: ' ', '-' | downcase }}">Find out more</a>
+  {% endif %}
+</div>

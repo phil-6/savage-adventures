@@ -105,10 +105,6 @@ body {
   a {
     color: $ink;
 
-    &.nav-link {
-      font-weight: 600;
-    }
-
     &:focus, &:hover {
       text-decoration: none;
       color: $ink-light;
@@ -236,6 +232,10 @@ body {
       color: $white;
     }
 
+    .nav .nav-link{
+      color: $white;
+    }
+
     &.our-team {
       background: $blue-pink-gradient fixed;
 
@@ -295,6 +295,10 @@ body {
     }
 
     .page-intro, .page-info {
+      color: $white;
+    }
+
+    .nav .nav-link{
       color: $white;
     }
 

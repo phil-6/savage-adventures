@@ -53,6 +53,11 @@
 
 }
 
+@font-face {
+    font-family: "rust";
+    src: url("/assets/fonts/zing-rust-grunge2-base.otf") format("opentype");
+}
+
 /*General Styles*/
 /*Typography*/
 /*100,300,400,900*/
@@ -82,26 +87,52 @@ header {
     /*height: 100%;*/
     width: 100%;
     background-size: cover;
-}
 
-.site-logo {
-    max-height: 260px;
-    object-fit: contain;
-}
+    .logo-row {
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
 
-.social-links, .contact-links {
-    padding-top: 20px;
-    display: flex;
-}
 
-.social-link {
-    padding-left: 5px;
-    padding-right: 5px;
-}
+    .site-logo {
+        max-height: 260px;
+        object-fit: contain;
 
-@media (max-width: 576px) {
-    .contact-links-col {
-        display: none;
+        @media (max-width: 576px) {
+            max-height: 180px;
+        }
+    }
+
+    .social-links, .contact-links {
+        padding-top: 20px;
+        display: flex;
+        @media (max-width: 576px) {
+            padding-top: 10px;
+        }
+    }
+
+    .social-link {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .nav .nav-link {
+        font-family: 'rust', sans-serif;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        padding: 0 1rem;
+
+        @media (max-width: 576px) {
+            font-size: 1.5rem;
+            padding: 0 0.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-links-col {
+            display: none;
+        }
     }
 }
 

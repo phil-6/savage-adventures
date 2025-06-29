@@ -1,6 +1,6 @@
 team_members:
   - name: Peter Savage
-    image: 189a1143.jpg
+    image: guide-pete-ice.jpg
     job: Owner & Instructor
     bio: |
       Pete's a real outdoor enthusiast! Whatever the weather he's out in it, even
@@ -23,16 +23,17 @@ team_members:
       away. Craig is often found tucked up tight, half welded into a Sea kayak.
       Craig has come onboard to improve and develop the educational side of
       Savage Adventures.
-    image: /assets/images/273149558_10158460805866024_2233738839153048924_n.jpg
+    image: guide-craig.jpg
     visible: false
   - name: Phil Reynolds
     image: guide-phil-coasteering-point-crop.jpg
-    job: Instructor
+    job: Instructor & Techie
     bio: |
       To get away from his day job behind a desk as a software engineer, Phil
       turns to his evening and weekend job as one of our adventure guides. He
       has a real passion of encouraging people to find their limits and take a
-      step past them.
+      step past them. Phil's also the one behind the website, so if you see
+      anything that needs fixing, drop him a message and he'll get it sorted!
     visible: true
   - name: Beckii Waters
     image: guide-bex.jpg

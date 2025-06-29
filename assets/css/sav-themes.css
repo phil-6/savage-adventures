@@ -117,10 +117,7 @@ body.multi-mode button#theme-toggle .light {
 body.multi-mode button#theme-toggle .dark {
   display: inline-block;
 }
-body.multi-mode .page-intro, body.multi-mode .page-info {
-  color: #f6f8f9;
-}
-body.multi-mode .nav .nav-link {
+body.multi-mode .page-intro, body.multi-mode .page-info, body.multi-mode .nav .nav-link {
   color: #f6f8f9;
 }
 body.multi-mode.our-team {
@@ -166,11 +163,17 @@ body.dark-mode a:focus, body.dark-mode a:hover {
   text-decoration: none;
   color: #606074;
 }
-body.dark-mode .page-intro, body.dark-mode .page-info {
+body.dark-mode .page-intro, body.dark-mode .page-info, body.dark-mode .nav .nav-link {
   color: #f6f8f9;
 }
-body.dark-mode .nav .nav-link {
+body.dark-mode table, body.dark-mode table.table-striped > tbody > tr:nth-of-type(odd) > * {
   color: #f6f8f9;
+}
+body.dark-mode table:hover, body.dark-mode table.table-striped > tbody > tr:nth-of-type(odd) > *:hover {
+  color: #dfecf1;
+}
+body.dark-mode table.table-hover > tbody > tr:hover > * {
+  color: #dfecf1;
 }
 body.dark-mode.our-team {
   background: linear-gradient(to bottom, #191654, #4A00E0, #8E2DE2) fixed;

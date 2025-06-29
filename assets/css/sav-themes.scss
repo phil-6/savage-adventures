@@ -228,11 +228,7 @@ body {
       }
     }
 
-    .page-intro, .page-info {
-      color: $white;
-    }
-
-    .nav .nav-link{
+    .page-intro, .page-info, .nav .nav-link{
       color: $white;
     }
 
@@ -294,12 +290,18 @@ body {
 
     }
 
-    .page-intro, .page-info {
+    .page-intro, .page-info, .nav .nav-link{
       color: $white;
     }
 
-    .nav .nav-link{
+    table, table.table-striped>tbody>tr:nth-of-type(odd)>*{
       color: $white;
+       &:hover  {
+         color: $gray;
+       }
+    }
+    table.table-hover>tbody>tr:hover>*{
+      color: $gray;
     }
 
     &.our-team {

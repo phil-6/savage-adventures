@@ -1,271 +1,270 @@
 :root {
 
-    /*theme colors*/
-    --blue: #00c8ff;
-    --blue-transparent: #00c8ffcc;
-    --blue-dark: #174a7a;
-    --blue-gradient: linear-gradient(to bottom, #5184b4, #174a7a, #002050);
-    --blue-gradient2: linear-gradient(to bottom left, #00B4DB, #0083B0);
+  /*theme colors*/
+  --blue: #00c8ff;
+  --blue-transparent: #00c8ffcc;
+  --blue-dark: #174a7a;
+  --blue-gradient: linear-gradient(to bottom, #5184b4, #174a7a, #002050);
+  --blue-gradient2: linear-gradient(to bottom left, #00B4DB, #0083B0);
 
-    --green: #18b600;
-    --green-transparent: #18b600cc;
-    --green-dark: #007200;
-    --green-gradient: linear-gradient(to bottom, #18b600, #008f00, #007200);
-    --green-gradient2: linear-gradient(to bottom, #52c234, #061700);
-
-
-    --yellow: #f0ac00;
-    --yellow-dark: #d08d00;
-    --yellow-gradient: linear-gradient(to bottom, #f0ac00, #d08d00);
-    --yellow-gradient2: linear-gradient(10deg, #f0ac00, #db36a4); /*f7ff00*/
-
-    --red: #970000;
-    --red-dark: #680000;
-    --red-orange: #f83600;
-    --red-orange-transparent: #f83600cc;
-    --red-gradient: linear-gradient(to bottom, #970000, #800000, #680000);
-    --red-gradient2: linear-gradient(170deg, #fe8c00, #f83600);
-
-    --pink: #f953c6;
-    --pink-dark: #b91d73;
-    --pink-gradient: linear-gradient(to bottom, #f953c6, #b91d73);
-    --pink-gradient2: radial-gradient(#ff6a00, #ee0979);
-
-    --blue-pink-gradient: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff);
-    --blue-green-gradient: linear-gradient(to bottom, #18b600, #00c8ff);
+  --green: #18b600;
+  --green-transparent: #18b600cc;
+  --green-dark: #007200;
+  --green-gradient: linear-gradient(to bottom, #18b600, #008f00, #007200);
+  --green-gradient2: linear-gradient(to bottom, #52c234, #061700);
 
 
-    --savage-bg-fallback: #00c8ff;
-    --savage-bg: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
-    --savage-bg-to-top: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+  --yellow: #f0ac00;
+  --yellow-dark: #d08d00;
+  --yellow-gradient: linear-gradient(to bottom, #f0ac00, #d08d00);
+  --yellow-gradient2: linear-gradient(10deg, #f0ac00, #db36a4); /*f7ff00*/
 
-    --light-gradient-blue: linear-gradient(to bottom, #0575E6, #021B79);
-    --light-gradient-purple: linear-gradient(to bottom, #8E2DE2, #4A00E0);
-    --light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
-    --light-gradient-green: linear-gradient(to bottom, #43C6AC, #191654);
+  --red: #970000;
+  --red-dark: #680000;
+  --red-orange: #f83600;
+  --red-orange-transparent: #f83600cc;
+  --red-gradient: linear-gradient(to bottom, #970000, #800000, #680000);
+  --red-gradient2: linear-gradient(170deg, #fe8c00, #f83600);
+
+  --pink: #f953c6;
+  --pink-dark: #b91d73;
+  --pink-gradient: linear-gradient(to bottom, #f953c6, #b91d73);
+  --pink-gradient2: radial-gradient(#ff6a00, #ee0979);
+
+  --blue-pink-gradient: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff);
+  --blue-green-gradient: linear-gradient(to bottom, #18b600, #00c8ff);
 
 
-    --ink: #000021;
-    --ink-light: #606074;
-    --white: #ffffff;
-    --white-transparent: #ffffff88;
-    --black-transparent: #00002166;
+  --savage-bg-fallback: #00c8ff;
+  --savage-bg: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+  --savage-bg-to-top: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
+
+  --light-gradient-blue: linear-gradient(to bottom, #0575E6, #021B79);
+  --light-gradient-purple: linear-gradient(to bottom, #8E2DE2, #4A00E0);
+  --light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
+  --light-gradient-green: linear-gradient(to bottom, #43C6AC, #191654);
+
+
+  --ink: #000021;
+  --ink-light: #606074;
+  --white: #ffffff;
+  --white-transparent: #ffffff88;
+  --black-transparent: #00002166;
 
 }
 
 @font-face {
-    font-family: "rust";
-    src: url("/assets/fonts/zing-rust-grunge2-base.otf") format("opentype");
+  font-family: "rust";
+  src: url("/assets/fonts/zing-rust-grunge2-base.otf") format("opentype");
 }
 
 /*General Styles*/
 /*Typography*/
 /*100,300,400,900*/
 h1, h2, h3, .display-heading {
-    font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h4, h5, h6 {
-    font-family: 'raleway', sans-serif;
+  font-family: 'raleway', sans-serif;
 }
 
 h5 {
-    font-weight: 400;
-    font-size: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 html {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-    min-height: 100%;
-    font-family: 'raleway', sans-serif;;
+  min-height: 100%;
+  font-family: 'raleway', sans-serif;;
 }
 
 header {
-    /*height: 100%;*/
-    width: 100%;
-    background-size: cover;
+  /*height: 100%;*/
+  width: 100%;
+  background-size: cover;
 
-    .logo-row {
-        @media (max-width: 576px) {
-            flex-direction: column;
-        }
+  .logo-row {
+    @media (max-width: 576px) {
+      flex-direction: column;
     }
+  }
 
-
-    .site-logo {
-        max-height: 260px;
-        object-fit: contain;
-
-        @media (max-width: 576px) {
-            max-height: 180px;
-        }
-    }
-
-    .social-links, .contact-links {
-        padding-top: 20px;
-        display: flex;
-        @media (max-width: 576px) {
-            padding-top: 10px;
-        }
-    }
-
-    .social-link {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .nav .nav-link {
-        font-family: 'rust', sans-serif;
-        font-size: 2.2rem;
-        text-transform: uppercase;
-        padding: 0 1rem;
-
-        @media (max-width: 576px) {
-            font-size: 1.5rem;
-            padding: 0 0.5rem;
-        }
-    }
+  .site-logo {
+    max-height: 260px;
+    object-fit: contain;
 
     @media (max-width: 576px) {
-        .contact-links-col {
-            display: none;
-        }
+      max-height: 180px;
     }
+  }
+
+  .social-links, .contact-links {
+    padding-top: 20px;
+    display: flex;
+    @media (max-width: 576px) {
+      padding-top: 10px;
+    }
+  }
+
+  .social-link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .nav .nav-link {
+    font-family: 'rust', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-links-col {
+      display: none;
+    }
+  }
 }
 
 .quick-links .card {
-    background: var(--savage-bg);
-    border: none;
-    margin: 5px;
-    max-height: 180px;
-    max-width: 180px;
-    min-width: 180px;
+  background: var(--savage-bg);
+  border: none;
+  margin: 5px;
+  max-height: 180px;
+  max-width: 180px;
+  min-width: 180px;
 }
 
 .quick-links .card i {
-    font-size: 4.5em;
+  font-size: 4.5em;
 }
 
 .quick-links h5 {
-    padding-top: 15px;
-    display: inline-block;
+  padding-top: 15px;
+  display: inline-block;
 }
 
 @media (max-width: 576px) {
-    .quick-links .card-deck {
-        flex-flow: row wrap;
-        margin-right: -5px;
-        margin-left: -5px;
-    }
+  .quick-links .card-deck {
+    flex-flow: row wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+  }
 
-    .quick-links .card {
-        max-height: 120px;
-        max-width: 120px;
-        min-width: 100px;
-        margin: 5px;
-    }
+  .quick-links .card {
+    max-height: 120px;
+    max-width: 120px;
+    min-width: 100px;
+    margin: 5px;
+  }
 
-    .quick-links .card i {
-        font-size: 2.5em;
-    }
+  .quick-links .card i {
+    font-size: 2.5em;
+  }
 
-    .quick-links .card h5 {
-        font-size: 0.8rem;
-        padding-top: 5px;
-    }
+  .quick-links .card h5 {
+    font-size: 0.8rem;
+    padding-top: 5px;
+  }
 }
 
 .quick-links .card.about-us {
-    background: var(--blue-pink-gradient);
+  background: var(--blue-pink-gradient);
 }
 
 .quick-links .card.corporate {
-    background: var(--blue-gradient2);
+  background: var(--blue-gradient2);
 }
 
 .quick-links .card.stag-hen {
-    background: var(--yellow-gradient2);
+  background: var(--yellow-gradient2);
 }
 
 .quick-links .card.training {
-    background: var(--blue-green-gradient);
+  background: var(--blue-green-gradient);
 }
 
 .quick-links .card.contact-us {
-    background: var(--red-gradient2);
+  background: var(--red-gradient2);
 }
 
 .quick-links a {
-    color: var(--white);
+  color: var(--white);
 }
 
 .quick-links a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .upcoming-events {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .upcoming-events h1 {
 }
 
 .upcoming-events .card, .our-team .card {
-    border: none;
+  border: none;
 }
 
 .upcoming-events .card img {
-    max-height: 250px;
-    object-fit: cover;
+  max-height: 250px;
+  object-fit: cover;
 }
 
 .page-intro, .page-info {
-    max-width: 900px;
-    text-align: justify;
-    font-weight: 400;
-    font-size: 1.3rem;
+  max-width: 900px;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 
 .our-team .page-content {
-    margin-top: 10px;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .our-team .card {
-    max-width: 360px;
-    min-width: 320px;
-    margin: 8px;
+  max-width: 360px;
+  min-width: 320px;
+  margin: 8px;
 }
 
 @media (max-width: 576px) {
-    .our-team .page-content {
-        padding: 0;
-    }
+  .our-team .page-content {
+    padding: 0;
+  }
 
-    .our-team .card {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100vw;
-    }
+  .our-team .card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100vw;
+  }
 }
 
 .our-team .card h1, .our-team .card h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .our-team .card h1, .our-team .card h3, .our-team .card p {
-    margin: 8px;
+  margin: 8px;
 }
 
 .our-team .card img {
-    max-height: 250px;
-    /*max-width: 360px;*/
-    object-fit: cover;
-    overflow: hidden;
+  max-height: 250px;
+  /*max-width: 360px;*/
+  object-fit: cover;
+  overflow: hidden;
 }
 
 /*.our-team .card.peter{
@@ -282,273 +281,294 @@ header {
 }*/
 
 .book-now-button, .find-out-more-button {
-    color: var(--white);
-    margin-bottom: 20px;
-    box-shadow: 6px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  margin-bottom: 20px;
+  box-shadow: 6px 4px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .book-now-button:hover, .find-out-more-button:hover {
-    color: var(--ink-light);
-    box-shadow: none;
-    transition: all 0.2s;
+  color: var(--ink-light);
+  box-shadow: none;
+  transition: all 0.2s;
 }
 
 @media (min-width: 576px) {
-    .adventures-summary {
-        max-width: 80%;
-    }
+  .adventures-summary {
+    max-width: 80%;
+  }
 
-    .adventures-summary .row img {
-        margin-top: -40px;
-    }
+  .adventures-summary .row img {
+    margin-top: -40px;
+  }
 
-    .adventures-summary .row h1 {
-        margin-top: 50px;
-    }
+  .adventures-summary .row h1 {
+    margin-top: 50px;
+  }
 }
 
 .adventures-summary .row img {
-    max-width: 100%;
-    max-height: 600px;
+  max-width: 100%;
+  max-height: 600px;
 }
 
 @media (max-width: 576px) {
-    .adventures-summary .row .col-md-5 {
-        padding: 0;
-    }
+  .adventures-summary .row .col-md-5 {
+    padding: 0;
+  }
 
-    .adventures-summary .row img {
-        max-width: 100vw;
-    }
+  .adventures-summary .row img {
+    max-width: 100vw;
+  }
 }
 
 .info-section {
-    margin-right: -15px;
-    margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .info-section h2, .info-section h4 {
-    text-align: center;
+  text-align: center;
 }
 
 .info-section.intro {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 @media (min-width: 768px) {
-    .info-section {
-        margin: 0;
-        text-align: left;
-    }
+  .info-section {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .adventures-detail hr {
-    border-color: var(--ink);
-    border-width: 3px;
-    max-width: 150px;
+  border-color: var(--ink);
+  border-width: 3px;
+  max-width: 150px;
 }
 
 @media (min-width: 992px) {
-    .adventures-detail {
-        max-width: 80%;
+  .adventures-detail {
+    max-width: 80%;
+  }
+}
+
+.training {
+  .page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .description {
+      p {
+        text-align: justify;
+        font-weight: 400;
+        font-size: 1.3rem;
+      }
     }
+    .btn-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 
 /*Book Now Modal*/
 .modal .modal-dialog {
-    min-width: 680px;
-    height: 450px;
+  min-width: 680px;
+  height: 450px;
 }
 
 .modal .modal-content {
-    min-width: 680px;
-    height: 450px;
+  min-width: 680px;
+  height: 450px;
 }
 
 .modal .modal-body {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .modal .modal-body.background-bec {
-    background-image: url("../images/guide-bex.jpg");
+  background-image: url("../images/guide-bex.jpg");
 }
 
 .modal .modal-body.background-tom {
-    background-image: url("../images/mountain-biking-trail.jpg");
+  background-image: url("../images/mountain-biking-trail.jpg");
 }
 
 .modal .modal-body.background-runjump {
-    background-image: url("../images/coasteering-run-jump.jpg");
+  background-image: url("../images/coasteering-run-jump.jpg");
 }
 
 .modal .modal-body.background-jumpnervous {
-    background-image: url("../images/canyoning-jump-nervous.jpg");
+  background-image: url("../images/canyoning-jump-nervous.jpg");
 }
 
 .modal .modal-body.background-waterfallslide {
-    background-image: url("../images/canyoning-slide.jpg");
+  background-image: url("../images/canyoning-slide.jpg");
 }
 
 .modal .modal-body.background-philcoasteeringjump {
-    background-image: url("../images/guide-phil-coasteering-jump.jpg");
+  background-image: url("../images/guide-phil-coasteering-jump.jpg");
 }
 
 .modal .close {
-    color: var(--white);
-    font-size: 48px;
-    line-height: 8px;
-    opacity: 1;
-    z-index: 2;
-    background: none;
-    border: none;
+  color: var(--white);
+  font-size: 48px;
+  line-height: 8px;
+  opacity: 1;
+  z-index: 2;
+  background: none;
+  border: none;
 }
 
 .modal .close:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .modal .modal-heading-top {
-    margin-top: 15px;
-    letter-spacing: 0.2rem;
+  margin-top: 15px;
+  letter-spacing: 0.2rem;
 }
 
 .modal .modal-heading-middle {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .modal .modal-heading-bottom {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
 .modal .modal-heading-white {
-    color: var(--white);
+  color: var(--white);
 }
 
 .modal .modal-heading-orange {
-    color: var(--red-orange);
+  color: var(--red-orange);
 }
 
 .modal .modal-heading-blue {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .modal .modal-heading-orange.text-runjump {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .modal form {
-    margin-top: 15px;
-    padding: 15px;
+  margin-top: 15px;
+  padding: 15px;
 }
 
 .modal .form-control {
-    margin: 5px;
-    background-color: rgba(252, 252, 252, 0.6);
-    border: 2px solid var(--blue);
+  margin: 5px;
+  background-color: rgba(252, 252, 252, 0.6);
+  border: 2px solid var(--blue);
 }
 
 .modal .form-control:focus {
-    background-color: rgba(252, 252, 252, 0.9);
+  background-color: rgba(252, 252, 252, 0.9);
 }
 
 .modal .form-control::placeholder {
-    color: var(--blue-dark);
+  color: var(--blue-dark);
 }
 
 .modal .col.name {
-    padding-left: 0;
-    padding-right: 5px;
+  padding-left: 0;
+  padding-right: 5px;
 }
 
 .modal .col.email {
-    padding-left: 5px;
-    padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 
 .modal .form-control.message {
-    height: 160px;
+  height: 160px;
 }
 
 .modal .btn-primary {
-    width: 100%;
-    margin: 5px;
+  width: 100%;
+  margin: 5px;
 }
 
 .modal .thankyou_message {
-    color: var(--blue);
-    letter-spacing: 0.2rem;
-    text-shadow: 0 0 10px rgba(50, 50, 50, 1);
-    text-align: right;
+  color: var(--blue);
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 10px rgba(50, 50, 50, 1);
+  text-align: right;
 }
 
 @media (max-width: 576px) {
-    .modal .modal-dialog {
-        margin: 0;
-    }
+  .modal .modal-dialog {
+    margin: 0;
+  }
 
-    .modal .modal-content {
-        min-width: auto;
-        max-width: 100vw;
-    }
+  .modal .modal-content {
+    min-width: auto;
+    max-width: 100vw;
+  }
 
-    .modal .modal-heading-white {
-        margin-top: 10px;
-    }
+  .modal .modal-heading-white {
+    margin-top: 10px;
+  }
 
-    .modal .modal-heading-orange {
-        margin-top: 15px;
-    }
+  .modal .modal-heading-orange {
+    margin-top: 15px;
+  }
 
-    .modal form {
-        margin-top: 5px;
-    }
+  .modal form {
+    margin-top: 5px;
+  }
 }
 
 /*Contact Us Form*/
 @media (min-width: 576px) {
-    #contact-form-row {
-        max-width: 600px;
-        width: 80%;
-    }
+  #contact-form-row {
+    max-width: 600px;
+    width: 80%;
+  }
 }
 
 #contact-form-row .col.name {
-    padding-left: 0;
-    padding-right: 5px;
+  padding-left: 0;
+  padding-right: 5px;
 }
 
 #contact-form-row .col.email {
-    padding-left: 15px;
-    padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
 #contact-form-row .form-control.message {
-    height: 160px;
+  height: 160px;
 }
 
 #contact-form-row form {
-    margin-top: 15px;
-    padding: 15px;
+  margin-top: 15px;
+  padding: 15px;
 }
 
 #contact-form-row .form-control {
-    margin: 5px;
-    background-color: rgba(252, 252, 252, 0.6);
-    border: 2px solid var(--blue);
+  margin: 5px;
+  background-color: rgba(252, 252, 252, 0.6);
+  border: 2px solid var(--blue);
 }
 
 #contact-form-row .form-control:focus {
-    background-color: rgba(252, 252, 252, 0.9);
+  background-color: rgba(252, 252, 252, 0.9);
 }
 
 #contact-form-row .form-control::placeholder {
-    color: var(--blue-dark);
+  color: var(--blue-dark);
 }
 
 .full-width img {
-    width: 100vw;
-    position: absolute;
-    left: 0;
+  width: 100vw;
+  position: absolute;
+  left: 0;
 }

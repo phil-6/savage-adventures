@@ -1,1 +1,26 @@
-<section class="container-fluid page-content"></section>
+<section class="container-fluid page-content">
+  <div class="row">
+    <div class="col">
+      <div class="btn-container">
+        <button type="button" class="book-now-button btn btn-orange"
+                data-bs-toggle="modal"
+                data-bs-target="#bookNowModal">
+          Book Now!
+        </button>
+      </div>
+      <h2>Available Courses</h2>
+      {% include training/first-aid/paediatric.html %}
+      {% include training/first-aid/at-work.html %}
+      {% include training/first-aid/outdoor.html %}
+      {% include training/first-aid/list.html %}
+      <div class="btn-container">
+        <button type="button" class="book-now-button btn btn-orange"
+                data-bs-toggle="modal"
+                data-bs-target="#bookNowModal">
+          Book Now!
+        </button>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -47,6 +47,10 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: true
+    header-images:
+      - header-07-climbing.png
+      - header-10-abseiling.png
+      - header-20-climbing.png
   - name: Surfing
     image: surfing-1.png
     description: >
@@ -116,3 +120,18 @@ adventures:
     visible: false
     find-out-more: false
     stag-hen: false
+  - name: Training and Courses
+    image: first-aid.jpg
+    description: >
+      We offer a range of first aid courses, from basic to advanced, to ensure
+      you are prepared for any situation. Our courses are designed to be
+      practical and engaging, providing you with the skills and confidence to
+      respond effectively in emergencies.
+    available: true
+    visible: false
+    find-out-more: false
+    stag-hen: false
+    header-images:
+      - header-06-first-aid.png
+      - header-13-first-aid.png
+      - header-31-first-aid.png

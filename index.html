@@ -3,6 +3,7 @@ layout: default
 title: Outdoor Activities Wales
 tagline: Discover your primal side
 ---
+{% assign header_images = site.static_files | where: 'header_image', true %}
 {% include main/slideshow.html %}
 {% include main/quick-links.html %}
 {% include lightwidget.html %}

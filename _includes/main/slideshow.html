@@ -1,6 +1,5 @@
 <!--Main Slideshow-->
 <!-- To add slides to the slideshow, add a new image to the assets/images/header_images directory -->
-{% assign header_images = site.static_files | where: 'header_image', true %}
 <div id="mainCarousel" class="carousel slide py-4" data-bs-ride="true" data-interval="5000">
   <ol class="carousel-indicators">
     {% for image in header_images %}

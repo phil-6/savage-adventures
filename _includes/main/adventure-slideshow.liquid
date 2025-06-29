@@ -1,0 +1,12 @@
+{% assign adventure = site.data.adventures.adventures | where: "name", page.title | first %}
+{% assign header_image_filenames = adventure.header-images %}
+{% assign all_header_images = site.static_files | where: "header_image", true %}
+{% assign adventure_header_images = "" | split: "" %}
+{% for filename in header_image_filenames %}
+  {% assign img = all_header_images | where: "name", filename | first %}
+  {% if img %}
+    {% assign adventure_header_images = adventure_header_images | push: img %}
+  {% endif %}
+{% endfor %}
+{% assign header_images = adventure_header_images %}
+{% include main/slideshow.html %}

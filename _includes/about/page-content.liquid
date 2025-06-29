@@ -2,12 +2,12 @@
     <div class="row justify-content-center">
         {% assign visible_members = site.data.team.team_members | where: "visible", true %}
         {% for member in visible_members %}
-        <div class="card col">
-            <h1>{{ member.name }}</h1>
-            <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}">
-            <h3>{{ member.job }}</h3>
-            <p>{{ member.bio }}</p>
-        </div>
+            <div class="card col">
+                <h1>{{ member.name }}</h1>
+                <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}">
+                <h3>{{ member.job }}</h3>
+                <p>{{ member.bio }}</p>
+            </div>
         {% endfor %}
     </div>
 </section>

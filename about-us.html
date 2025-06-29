@@ -5,16 +5,19 @@ tagline: Meet the team
 bodyclass: our-team
 ---
 <section class="container-fluid page-intro">
-    {% capture page-intro %}{% include about/page-intro.md%}{% endcapture %}
-    {{ page-intro | markdownify }}
-    <p>So put down your pen, step away from your desk and <a href="#moreInfoModal" class="" data-bs-toggle="modal" data-bs-target="#moreInfoModal">get in touch</a> to find out how we
-    can help you discover your primal side! </p>
+  {% capture page-intro %}{% include about/page-intro.md%}{% endcapture %}
+  {{ page-intro | markdownify }}
+  <p>
+    So put down your pen, step away from your desk and
+    <a href="#moreInfoModal" class="" data-bs-toggle="modal" data-bs-target="#moreInfoModal">get in touch</a> to find out how we can help
+    you discover your primal side!
+  </p>
 </section>
 
 {% include about/page-content.liquid %}
 
 <section class="container-fluid page-info">
-    {% capture age-info %}{% include age-info.md %}{% endcapture %}
-    {{ age-info | markdownify }}
+  {% capture age-info %}{% include age-info.md %}{% endcapture %}
+  {{ age-info | markdownify }}
 </section>
 {% include lightwidget.html %}

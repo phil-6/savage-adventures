@@ -5,14 +5,14 @@ tagline: Give them the send off they deserve
 bodyclass: stag-hen
 ---
 <section class="container-fluid page-intro">
-    {% capture page-intro %}{% include stag-hen/page-intro.md%}{% endcapture %}
-    {{ page-intro | markdownify }}
-    <div class="row text-center">
-        <div class="col">
-            <button type="button" class="book-now-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookNowModal">
-                Book Your Adventure Now!
-            </button>
-        </div>
+  {% capture page-intro %}{% include stag-hen/page-intro.md%}{% endcapture %}
+  {{ page-intro | markdownify }}
+  <div class="row text-center">
+    <div class="col">
+      <button type="button" class="book-now-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+        Book Your Adventure Now!
+      </button>
     </div>
+  </div>
 </section>
 {% include stag-hen/adventures.liquid %}

@@ -3,10 +3,14 @@ layout: default
 title: Team Building
 tagline: Enhance your team
 bodyclass: corporate
+header-images:
+  - header-16-corporate.png
+  - header-34-large-groups.png
+  - header-35-corporate.png
 ---
 <section class="container-fluid page-intro">
   {% capture page-intro %}{% include corporate/page-intro.md%}{% endcapture %}
   {{ page-intro | markdownify }}
   <p>For more information please <a href="#moreInfoModal" class="" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Contact Us</a></p>
 </section>
-{% include corporate/page-content.html %}
+{% include corporate/page-content.html.liquid %}

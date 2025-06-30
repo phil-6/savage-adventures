@@ -1,4 +1,4 @@
-#### Sometimes a team needs that extra push to truly gel together.
+### Sometimes a team needs that extra push to truly gel together.
 
 At Savage Adventures we offer a range of activities focused on bringing any team closer.
 

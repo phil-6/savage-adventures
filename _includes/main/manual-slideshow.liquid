@@ -1,0 +1,10 @@
+{% assign all_header_images = site.static_files | where: "header_image", true %}
+{% assign manual_header_images = "" | split: "" %}
+{% for filename in include.filenames %}
+  {% assign img = all_header_images | where: "name", filename | first %}
+  {% if img %}
+    {% assign manual_header_images = manual_header_images | push: img %}
+  {% endif %}
+{% endfor %}
+{% assign header_images = manual_header_images %}
+{% include main/slideshow.html %}

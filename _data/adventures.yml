@@ -97,6 +97,10 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: false
+    header-images:
+      - header-36-walking.png
+      - header-17-walking.png
+      - header-15-all-weather.png
   - name: SUP
     image: guide-pete-paddleboard-swim.gif
     description: >

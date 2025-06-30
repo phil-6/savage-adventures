@@ -64,7 +64,7 @@ adventures:
     available: true
     visible: true
     find-out-more: false
-    stag-hen: false
+    stag-hen: true
     header-images:
       - header-08-surfing.png
       - header-14-surfing.png

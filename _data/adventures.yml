@@ -51,6 +51,7 @@ adventures:
       - header-07-climbing.png
       - header-10-abseiling.png
       - header-20-climbing.png
+      - header-33-abseiling.png
   - name: Surfing
     image: surfing-1.png
     description: >

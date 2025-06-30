@@ -15,6 +15,8 @@ $ink-light: #606074;
 $white: #f6f8f9;
 $white-transparent: #ffffff88;
 $black-transparent: #00002166;
+$white-transparent-bg: #f6f8f9cc;
+$black-transparent-bg: #05285add;
 
 $purple-deep: #191654;
 $purple-medium: #4A00E0;
@@ -199,7 +201,6 @@ body {
     }
   }
 
-
   // Colourful mode
   &.multi-mode {
     background: $savage-bg;
@@ -230,6 +231,10 @@ body {
 
     .page-intro, .page-info, .nav .nav-link{
       color: $white;
+    }
+
+    ul.dropdown-menu.show {
+      background-color: $black-transparent-bg;
     }
 
     &.our-team {
@@ -294,6 +299,10 @@ body {
       color: $white;
     }
 
+    ul.dropdown-menu.show {
+      background-color: $black-transparent-bg;
+    }
+
     table, table.table-striped>tbody>tr:nth-of-type(odd)>*{
       color: $white;
        &:hover  {
@@ -355,6 +364,10 @@ body {
       .dark {
         display: none;
       }
+    }
+
+    ul.dropdown-menu.show {
+      background-color: $white-transparent-bg;
     }
 
     &.our-team {

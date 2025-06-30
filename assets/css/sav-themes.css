@@ -120,6 +120,9 @@ body.multi-mode button#theme-toggle .dark {
 body.multi-mode .page-intro, body.multi-mode .page-info, body.multi-mode .nav .nav-link {
   color: #f6f8f9;
 }
+body.multi-mode ul.dropdown-menu.show {
+  background-color: rgba(5, 40, 90, 0.8666666667);
+}
 body.multi-mode.our-team {
   background: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff) fixed;
 }
@@ -165,6 +168,9 @@ body.dark-mode a:focus, body.dark-mode a:hover {
 }
 body.dark-mode .page-intro, body.dark-mode .page-info, body.dark-mode .nav .nav-link {
   color: #f6f8f9;
+}
+body.dark-mode ul.dropdown-menu.show {
+  background-color: rgba(5, 40, 90, 0.8666666667);
 }
 body.dark-mode table, body.dark-mode table.table-striped > tbody > tr:nth-of-type(odd) > * {
   color: #f6f8f9;
@@ -214,6 +220,9 @@ body.light-mode button#theme-toggle .light {
 }
 body.light-mode button#theme-toggle .dark {
   display: none;
+}
+body.light-mode ul.dropdown-menu.show {
+  background-color: rgba(246, 248, 249, 0.8);
 }
 body.light-mode.our-team {
   background: linear-gradient(-45deg, #dfecf1, #f6f8f9) fixed;

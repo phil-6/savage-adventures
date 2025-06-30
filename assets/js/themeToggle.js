@@ -1,5 +1,6 @@
 const btn = document.querySelector("#theme-toggle");
 const label = btn.querySelector('#theme-label')
+const body = document.body
 // check to see if OS preferences for light or dark mode
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
@@ -21,19 +22,22 @@ function setTheme() {
         }
         setTheme()
     } else if (currentTheme === "dark") {
-        document.body.classList.remove("light-mode");
-        document.body.classList.remove("multi-mode");
-        document.body.classList.add("dark-mode");
+        body.classList.remove("light-mode");
+        body.classList.remove("multi-mode");
+        body.classList.add("dark-mode");
+        body.dataset.bsTheme = "dark";
         label.innerHTML = "Change to Colourful";
     } else if (currentTheme === "multi") {
-        document.body.classList.remove("dark-mode");
-        document.body.classList.remove("light-mode");
-        document.body.classList.add("multi-mode");
+        body.classList.remove("dark-mode");
+        body.classList.remove("light-mode");
+        body.classList.add("multi-mode");
+        body.dataset.bsTheme = "dark";
         label.innerHTML = "Change to Light Mode";
     } else if (currentTheme === "light") {
-        document.body.classList.remove("dark-mode");
-        document.body.classList.remove("multi-mode");
-        document.body.classList.add("light-mode");
+        body.classList.remove("dark-mode");
+        body.classList.remove("multi-mode");
+        body.classList.add("light-mode");
+        body.dataset.bsTheme = "light";
         label.innerHTML = "Change to Dark Mode";
     }
 }

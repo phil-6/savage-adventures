@@ -63,7 +63,14 @@
 /*100,300,400,900*/
 h1, h2, h3, .display-heading {
   font-family: 'Permanent Marker', cursive;
+  &.rust-heading {
+    font-family: 'rust', sans-serif;
+  }
 }
+
+h1.rust-heading { font-size: 3.5rem; }
+h2.rust-heading { font-size: 3rem; }
+h3.rust-heading { font-size: 2.5rem; }
 
 h4, h5, h6 {
   font-family: 'raleway', sans-serif;

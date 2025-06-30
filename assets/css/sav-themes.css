@@ -96,6 +96,37 @@ body .btn-green:hover {
   background-color: #18b600;
   border-color: #18b600;
 }
+body .development-warning {
+  background: repeating-linear-gradient(135deg, #f0ac00 0px, #f0ac00 20px, #000021 20px, #000021 40px);
+  color: #f6f8f9;
+  padding: 2rem 0;
+  position: relative;
+}
+body .development-warning a {
+  color: #f6f8f9;
+  text-decoration: underline;
+}
+body .development-warning a:hover {
+  color: #f0ac00;
+}
+body .development-warning::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(204, 204, 204, 0.1333333333);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 0;
+  pointer-events: none;
+}
+body .development-warning .container {
+  position: relative;
+  background: rgba(5, 40, 90, 0.9333333333);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem #000;
+  width: fit-content;
+}
 body.multi-mode {
   background: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
   color: #000021;
@@ -121,7 +152,7 @@ body.multi-mode .page-intro, body.multi-mode .page-info, body.multi-mode .nav .n
   color: #f6f8f9;
 }
 body.multi-mode ul.dropdown-menu.show {
-  background-color: rgba(5, 40, 90, 0.8666666667);
+  background-color: rgba(5, 40, 90, 0.9333333333);
 }
 body.multi-mode.our-team {
   background: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff) fixed;
@@ -170,7 +201,7 @@ body.dark-mode .page-intro, body.dark-mode .page-info, body.dark-mode .nav .nav-
   color: #f6f8f9;
 }
 body.dark-mode ul.dropdown-menu.show {
-  background-color: rgba(5, 40, 90, 0.8666666667);
+  background-color: rgba(5, 40, 90, 0.9333333333);
 }
 body.dark-mode table, body.dark-mode table.table-striped > tbody > tr:nth-of-type(odd) > * {
   color: #f6f8f9;
@@ -222,7 +253,7 @@ body.light-mode button#theme-toggle .dark {
   display: none;
 }
 body.light-mode ul.dropdown-menu.show {
-  background-color: rgba(246, 248, 249, 0.8);
+  background-color: rgba(246, 248, 249, 0.8666666667);
 }
 body.light-mode.our-team {
   background: linear-gradient(-45deg, #dfecf1, #f6f8f9) fixed;

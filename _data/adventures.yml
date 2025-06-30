@@ -13,6 +13,8 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: true
+    corporate: true
+    education: true
     header-images:
       - header-02-canyoning.png
   - name: Coasteering
@@ -28,6 +30,8 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: true
+    corporate: true
+    education: true
     header-images:
       - header-01-coasteering.png
       - header-12-coasteering.png
@@ -47,6 +51,8 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: true
+    corporate: true
+    education: true
     header-images:
       - header-07-climbing.png
       - header-10-abseiling.png
@@ -66,6 +72,8 @@ adventures:
     visible: true
     find-out-more: false
     stag-hen: true
+    corporate: true
+    education: true
     header-images:
       - header-08-surfing.png
       - header-14-surfing.png
@@ -85,6 +93,8 @@ adventures:
     visible: true
     find-out-more: false
     stag-hen: false
+    corporate: false
+    education: true
   - name: Guided Walks
     image: walking-mountain-cloud.jpg
     description: >
@@ -98,6 +108,8 @@ adventures:
     visible: true
     find-out-more: true
     stag-hen: false
+    corporate: true
+    education: true
     header-images:
       - header-36-walking.png
       - header-17-walking.png
@@ -116,6 +128,8 @@ adventures:
     visible: true
     find-out-more: false
     stag-hen: false
+    corporate: false
+    education: false
     header-images:
       - header-05-sup.png
   - name: Bushcraft
@@ -125,8 +139,10 @@ adventures:
     visible: false
     find-out-more: false
     stag-hen: false
+    corporate: false
+    education: true
   - name: Training and Courses
-    image: first-aid.jpg
+    image: logo-small.png
     description: >
       We offer a range of first aid courses, from basic to advanced, to ensure
       you are prepared for any situation. Our courses are designed to be
@@ -136,6 +152,8 @@ adventures:
     visible: false
     find-out-more: false
     stag-hen: false
+    corporate: true
+    education: true
     header-images:
       - header-06-first-aid.png
       - header-13-first-aid.png

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Educational Groups
+tagline: Focus their energy. Unlock the potential.
+bodyclass: corporate
+header-images:
+  - header-01-coasteering.png
+  - header-02-canyoning.png
+  - header-08-surfing.png
+  - header-09-beach-cleans.png
+  - header-14-all-weather.png
+---
+{% include main/page-under-development.html %}
+<section class="container-fluid page-intro">
+  {% capture page-intro %}{% include education/page-intro.md%}{% endcapture %}
+  {{ page-intro | markdownify }}
+</section>
+{% include education/page-content.html.liquid %}
+{% include education/adventures.html.liquid %}

@@ -1,5 +1,6 @@
-<!-- More Info Modal -->
-<div class="modal fade" id="moreInfoModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel"
+     aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body background-bec">
@@ -13,30 +14,32 @@
         <div class="row">
           <div class="col-md-5 text-center">
             <h3 class="modal-heading-white modal-heading-top">
-              Looking for more info?
+              Ready to take the plunge?
             </h3>
 
-            <h1 class="modal-heading-orange">
-              Let us know what you need and we'll make it happen.
+            <h1 class="modal-heading-orange modal-heading-bottom">
+              Contact us to book
             </h1>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6">
-            <form id="contact-us-form-2"
+            <form id="contact-us-form"
                   class="gform"
                   method="POST"
                   data-sheet="fromJuly2025"
                   action="https://script.google.com/macros/s/AKfycbzWsKEOl9pSSYSeruZOKUOOwSjl2U4H6X0MWOl4NYa9sJr11AT5978f0DwZHAFdsWHe/exec">
               <!--data-email="bookings@savage-adventures.com"-->
-              {% include contact-form-fields.html %}
+              {% include contact/contact-form-fields.html %}
               <div style="display:none" class="thankyou_message">
                 <!-- You can customize the thankyou message by editing the code below -->
                 <h2><em>Thanks</em> for contacting us! We will get back to you soon!
                 </h2>
               </div>
             </form>
+
           </div>
         </div>
+
       </div>
     </div>
   </div>

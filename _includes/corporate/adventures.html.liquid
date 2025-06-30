@@ -1,28 +1,15 @@
-<section class="container-fluid page-content adventures-summary">
+<section class="container-fluid page-content adventures-summary desktop">
   {% for adventure in site.data.adventures.adventures %}
     {% if adventure.corporate %}
       {% capture loop %}{% cycle 'odd', 'even' %}{% endcapture %}
-      {% if loop == 'odd' %}
-        <div class="row">
-          {% include adventures/title-row.html.liquid %}
-        </div>
-        <div class="row">
-          {% include adventures/summary-description.html.liquid %}
-          {% include adventures/summary-image.html.liquid %}
-        </div>
-      {% else %}
-        <div class="row">
-          <div class="col-md-5">
-          </div>
-          <div class="col-md-7">
-            {% include adventures/title-row.html.liquid %}
-          </div>
-        </div>
-        <div class="row">
-          {% include adventures/summary-image.html.liquid %}
-          {% include adventures/summary-description.html.liquid %}
-        </div>
-      {% endif %}
+      {% include adventures/desktop.html.liquid %}
+    {% endif %}
+  {% endfor %}
+</section>
+<section class="container-fluid adventures-summary mobile">
+  {% for adventure in site.data.adventures.adventures %}
+    {% if adventure.corporate %}
+      {% include adventures/mobile.html.liquid %}
     {% endif %}
   {% endfor %}
 </section>

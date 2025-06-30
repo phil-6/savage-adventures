@@ -299,9 +299,29 @@ header {
   transition: all 0.2s;
 }
 
+@media (max-width: 576px) {
+  /* Mobile */
+  .adventures-summary{
+    &.desktop {
+      display: none;
+    }
+    &.mobile {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
 @media (min-width: 576px) {
+  /* Desktop */
   .adventures-summary {
     max-width: 80%;
+    &.desktop {
+      display: block;
+    }
+    &.mobile {
+      display: none;
+    }
   }
 
   .adventures-summary .row img {

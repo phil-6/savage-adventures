@@ -75,23 +75,29 @@
         showSpinner(form);
         let url = form.action;
         let xhr = new XMLHttpRequest();
+        let timeoutDuration = 5000;
+
+        let timeout = setTimeout(function () {
+            resetForm(form);
+        }, timeoutDuration);
+
         xhr.open('POST', url);
         // xhr.withCredentials = true;
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
-            console.log(xhr.status, xhr.statusText);
-            console.log(xhr.responseText);
-            form.reset();
-            hideSpinner(form);
-            let formElements = form.querySelector(".form-elements");
-            if (formElements) {
-                formElements.style.display = "none"; // hide form
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                clearTimeout(timeout);
+                if (xhr.status === 200) {
+                    resetForm(form);
+                } else if (xhr.status !== 0) {
+                    hideSpinner(form);
+                    alert("Form submission failed. Please try again.");
+                    let buttons = form.querySelectorAll("button");
+                    for (let i = 0; i < buttons.length; i++) {
+                        buttons[i].disabled = false;
+                    }
+                }
             }
-            let thankYouMessage = form.querySelector(".thankyou_message");
-            if (thankYouMessage) {
-                thankYouMessage.style.display = "block";
-            }
-            return;
         };
         // url encode form data for sending as post data
         let encoded = Object.keys(data).map(function (k) {
@@ -115,6 +121,19 @@
         let buttons = form.querySelectorAll("button");
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
+        }
+    }
+
+    function resetForm(form) {
+        form.reset();
+        hideSpinner(form);
+        let formElements = form.querySelector(".form-elements");
+        if (formElements) {
+            formElements.style.display = "none"; // hide form
+        }
+        let thankYouMessage = form.querySelector(".thankyou_message");
+        if (thankYouMessage) {
+            thankYouMessage.style.display = "block";
         }
     }
 
@@ -144,10 +163,9 @@
 })();
 
 // turnstile
-window.onTurnstileSuccess = function(token) {
+window.onTurnstileSuccess = function (token) {
     const disabledSubmitButtons = document.querySelectorAll('button[type="submit"][disabled]');
-    disabledSubmitButtons.forEach(function(button) {
+    disabledSubmitButtons.forEach(function (button) {
         button.disabled = false;
     });
 };
-

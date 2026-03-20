@@ -26,3 +26,4 @@ form_action_url: "https://script.google.com/macros/s/AKfycbzWsKEOl9pSSYSeruZOKUO
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-sitemap

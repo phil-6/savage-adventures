@@ -4,7 +4,7 @@
         {% for member in visible_members %}
             <div class="card col">
                 <h1>{{ member.name }}</h1>
-                <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}">
+                <img src="/assets/images/{{ member.image }}" alt="guide {{ member.name }}" loading="lazy">
                 <h3>{{ member.job }}</h3>
                 <p>{{ member.bio }}</p>
             </div>

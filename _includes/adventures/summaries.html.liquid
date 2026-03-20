@@ -1,14 +1,35 @@
-<section class="container-fluid adventures-summary desktop">
+<section class="container-fluid adventures-summary">
   {% for adventure in site.data.adventures.adventures %}
     {% if adventure.visible %}
-      {% include adventures/desktop.html.liquid %}
-    {% endif %}
-  {% endfor %}
-</section>
-<section class="container-fluid adventures-summary mobile">
-  {% for adventure in site.data.adventures.adventures %}
-    {% if adventure.visible %}
-      {% include adventures/mobile.html.liquid %}
+      {% capture loop %}{% cycle 'odd', 'even' %}{% endcapture %}
+      <div class="row">
+        {% if loop == 'even' %}<div class="col-md-5 d-none d-md-block"></div>{% endif %}
+        <div class="{% if loop == 'even' %}col-md-7{% endif %}">
+          {% include adventures/title-row.html.liquid %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 {% if loop == 'odd' %}order-md-2{% endif %}">
+          <img src="/assets/images/{{ adventure.image }}" alt="{{ adventure.name }}" loading="lazy">
+        </div>
+        <div class="col-md-7 page-info {% if loop == 'odd' %}order-md-1{% endif %}">
+          <p>{{ adventure.description }}</p>
+          {% if adventure.available %}
+            <button type="button" class="book-now-button btn btn-orange"
+                    data-bs-toggle="modal" data-bs-target="#bookNowModal">
+              Book Now!
+            </button>
+          {% else %}
+            <button type="button" class="book-now-button btn btn-orange" disabled>
+              Coming Soon
+            </button>
+          {% endif %}
+          {% if adventure.find-out-more %}
+            <a class="btn btn-green find-out-more-button"
+               href="/adventures/{{ adventure.name | replace: ' ', '-' | downcase }}">Find out more</a>
+          {% endif %}
+        </div>
+      </div>
     {% endif %}
   {% endfor %}
 </section>

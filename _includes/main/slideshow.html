@@ -11,7 +11,7 @@
     {% for image in header_images %}
     <div class="carousel-item {% if forloop.first %}active{% endif %}">
       {% assign alt_text = site.data.header_images[image.basename] %}
-      <img class="d-block w-100" src="{{ image.path }}" alt="{{ alt_text | default: image.basename }}">
+      <img class="d-block w-100" src="{{ image.path }}" alt="{{ alt_text | default: image.basename }}"{% unless forloop.first %} loading="lazy"{% endunless %}>
     </div>
     {% endfor %}
   </div>

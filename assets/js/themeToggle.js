@@ -1,4 +1,5 @@
 const btn = document.querySelector("#theme-toggle");
+if (!btn) throw new Error("Theme toggle button not found");
 const label = btn.querySelector('#theme-label')
 const body = document.body
 // check to see if OS preferences for light or dark mode
@@ -6,10 +7,10 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 
 // check to see if local storage has a theme preference
-let currentTheme = localStorage.getItem("theme");
+let currentTheme = null;
+try { currentTheme = localStorage.getItem("theme"); } catch(e) {}
 
 function setTheme() {
-    console.log("Setting theme to: " + currentTheme);
     //if no local storage check against system preferences
     if (currentTheme === null) {
         if (prefersDarkScheme.matches) {

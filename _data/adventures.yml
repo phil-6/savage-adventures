@@ -16,7 +16,7 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-02-canyoning.png
+      - header-02-canyoning.jpg
   - name: Coasteering
     image: coasteering-jump-together.jpg
     description: >
@@ -33,10 +33,10 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-01-coasteering.png
-      - header-12-coasteering.png
-      - header-30-coasteering.png
-      - header-40-coasteering.png
+      - header-01-coasteering.jpg
+      - header-12-coasteering.jpg
+      - header-30-coasteering.jpg
+      - header-40-coasteering.jpg
   - name: Climbing
     image: guide-pete-climbing.jpg
     description: >
@@ -54,12 +54,12 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-07-climbing.png
-      - header-10-abseiling.png
-      - header-20-climbing.png
-      - header-33-abseiling.png
+      - header-07-climbing.jpg
+      - header-10-abseiling.jpg
+      - header-20-climbing.jpg
+      - header-33-abseiling.jpg
   - name: Surfing
-    image: surfing-1.png
+    image: surfing-1.jpg
     description: >
       Surfing at Rhossili Beach is an experience like no other. With its 
       expansive golden sands set against a backdrop of dramatic cliffs and 
@@ -75,9 +75,9 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-08-surfing.png
-      - header-14-surfing.png
-      - header-32-surfing.png
+      - header-08-surfing.jpg
+      - header-14-surfing.jpg
+      - header-32-surfing.jpg
   - name: Sit-on-Top Kayaking
     image: sit-on-top.jpg
     description: >
@@ -111,11 +111,11 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-36-walking.png
-      - header-17-walking.png
-      - header-15-all-weather.png
+      - header-36-walking.jpg
+      - header-17-walking.jpg
+      - header-15-all-weather.jpg
   - name: SUP
-    image: guide-pete-paddleboard-swim.gif
+    image: guide-pete-paddleboard-swim.jpg
     description: >
       Stand Up Paddle Boarding is one of the fastest growing watersports
       with thousands more people giving it a go each year. We offer the normal
@@ -131,7 +131,7 @@ adventures:
     corporate: false
     education: false
     header-images:
-      - header-05-sup.png
+      - header-05-sup.jpg
   - name: Bushcraft
     image: logo-small.png
     description: >
@@ -157,6 +157,6 @@ adventures:
     corporate: true
     education: true
     header-images:
-      - header-06-first-aid.png
-      - header-13-first-aid.png
-      - header-31-first-aid.png
+      - header-06-first-aid.jpg
+      - header-13-first-aid.jpg
+      - header-31-first-aid.jpg

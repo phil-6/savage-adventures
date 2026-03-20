@@ -1,18 +1,15 @@
+---
+---
 /* theme colours */
-$dark: #0e182a;
 $ink-dark: #05285a;
 $light: #dfecf1;
-$ink-light: #ece9e6;
 
 $white: #f6f8f9;
 $gray: #dfecf1;
-$dark-gray: #495087;
 $medium-gray: #c8bedc;
-
 
 $ink: #000021;
 $ink-light: #606074;
-$white: #f6f8f9;
 $white-transparent: #ffffff88;
 $black-transparent: #00002166;
 $white-transparent-bg: #f6f8f9dd;
@@ -64,7 +61,7 @@ $light-gradient-blue: linear-gradient(to bottom, $white, #99e9ff);
 $light-gradient-purple: linear-gradient(to bottom, #8E2DE2, $purple-medium);
 $light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
 $light-gradient-green: linear-gradient(to bottom, #43C6AC, $green);
-$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow,);
+$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow);
 $light-background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
 
 $dark-gradient-purple: linear-gradient(to bottom, $purple-deep, $purple-medium, #8E2DE2);

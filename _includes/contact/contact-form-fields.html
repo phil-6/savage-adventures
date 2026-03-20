@@ -19,19 +19,25 @@
     </div>
   </div>
   <div class="row">
-    <label for="{{ include.form_id }}-subject" class="visually-hidden">Subject</label>
-    <input type="text" id="{{ include.form_id }}-subject" name="subject" class="form-control"
-           placeholder="Subject" required>
+    <div class="col">
+      <label for="{{ include.form_id }}-subject" class="visually-hidden">Subject</label>
+      <input type="text" id="{{ include.form_id }}-subject" name="subject" class="form-control"
+             placeholder="Subject" required>
+    </div>
   </div>
   <div class="row">
-    <label for="{{ include.form_id }}-message" class="visually-hidden">Message</label>
-    <textarea id="{{ include.form_id }}-message" name="message" class="form-control"
-              placeholder="Message" required></textarea>
+    <div class="col">
+      <label for="{{ include.form_id }}-message" class="visually-hidden">Message</label>
+      <textarea id="{{ include.form_id }}-message" name="message" class="form-control"
+                placeholder="Message" required></textarea>
+    </div>
   </div>
   <input type="hidden" name="honeypot">
-  {% include contact/cf-turnstile.html %}
+  <div class="d-flex justify-content-center">
+    {% include contact/cf-turnstile.html %}
+  </div>
   <div class="row justify-content-center">
-    <button type="submit" class="btn btn-primary submit-button" disabled>
+    <button type="submit" class="btn btn-primary submit-button w-auto" disabled>
       <em>Send</em>
     </button>
   </div>

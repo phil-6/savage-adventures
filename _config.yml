@@ -20,6 +20,9 @@ defaults:
     values:
       header_image: true
 
+# Form submission
+form_action_url: "https://script.google.com/macros/s/AKfycbzWsKEOl9pSSYSeruZOKUOOwSjl2U4H6X0MWOl4NYa9sJr11AT5978f0DwZHAFdsWHe/exec"
+
 # Build settings
 plugins:
   - jekyll-feed

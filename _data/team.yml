@@ -4,7 +4,7 @@ team_members:
     job: Owner & Instructor
     bio: |
       Pete's a real outdoor enthusiast! Whatever the weather he's out in it, even
-      on the rainy days. Pete started the company up in 2015, Pete set eyes on
+      on the rainy days.       Pete started the company in 2015 and set his eyes on
       changing the way the outdoors is enjoyed and with his passion for the
       outdoors and stubbornness to give in the company was founded. Pete
       endeavours to encourage everyone he meets to come and see it for
@@ -19,11 +19,10 @@ team_members:
   - name: Craig Ritz
     job: Development Officer
     bio: |
-      Craig is the lumbering giant of the group, easy to spotted from half a mile
+      Craig is the lumbering giant of the group, easy to spot from half a mile
       away. Craig is often found tucked up tight, half welded into a Sea kayak.
       Craig has come onboard to improve and develop the educational side of
       Savage Adventures.
-    image: guide-craig.jpg
     visible: false
   - name: Phil Reynolds
     image: guide-phil-coasteering-point-crop.jpg
@@ -52,5 +51,5 @@ team_members:
       on his paddleboard, exploring hidden coves and winding riverways. Simon 
       brings boundless energy and creativity to the team, always seeking out new
       experiences to share with others. His love for the outdoors shines through 
-      in everythinghe does, ensuring that every new adventure is crafted with 
+             in everything he does, ensuring that every new adventure is crafted with 
       care, excitement, and a deep respect for nature.

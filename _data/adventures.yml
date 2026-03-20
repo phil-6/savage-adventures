@@ -44,12 +44,12 @@ adventures:
       in popularity. Climbing is one of the most thrilling, rewarding and unique
       ways to adventure. Experience the beautiful Welsh national coastline of
       Pembrokeshire and the Gower Peninsula from a new, vertical, perspective.
-      If you’re new to climbing and want to give it a go or if you’ve climbed
-      before and want to foray into the world of trad, get in touch and we’ll
+      If you're new to climbing and want to give it a go or if you've climbed
+      before and want to foray into the world of trad, get in touch and we'll
       build the day for you
     available: true
     visible: true
-    find-out-more: true
+    find-out-more: false
     stag-hen: true
     corporate: true
     education: true
@@ -98,15 +98,15 @@ adventures:
   - name: Guided Walks
     image: walking-mountain-cloud.jpg
     description: >
-      Feeling like you want to keep both feet on the ground, but don’t
+      Feeling like you want to keep both feet on the ground, but don't
       want to miss out on the spectacular sights and wonders of Wales…? Well,
-      fear not, with our walking tours you won’t miss out on any of the action.
-      Imagine being stood on the top of some of the best  Mountains in wales and
+      fear not, with our walking tours you won't miss out on any of the action.
+      Imagine being stood on the top of some of the best mountains in Wales and
       enjoying the picturesque 360° views of the beautiful lakes and forests
       below.
     available: true
     visible: true
-    find-out-more: true
+    find-out-more: false
     stag-hen: false
     corporate: true
     education: true
@@ -133,8 +133,10 @@ adventures:
     header-images:
       - header-05-sup.png
   - name: Bushcraft
-    image: canyoning-waterfall-group.jpg
-    description: Learn to survive like Ray Mears
+    image: logo-small.png
+    description: >
+      Learn essential wilderness survival skills including fire-making,
+      shelter-building and foraging in the Welsh countryside.
     available: false
     visible: false
     find-out-more: false

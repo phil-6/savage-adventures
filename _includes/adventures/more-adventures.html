@@ -1,0 +1,22 @@
+<!--More Adventures-->
+<section class="container-fluid text-center py-4 more-adventures">
+  <h2>More adventures</h2>
+  <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
+    {% for adventure in site.data.adventures.adventures %}
+      {% if adventure.visible and adventure.name != page.title %}
+        {% if adventure.bookwild_short_name %}
+          <a class="btn btn-outline-primary"
+             href="{{ site.bookwild.activities_url }}/{{ adventure.bookwild_short_name }}">
+            {{ adventure.name }}
+          </a>
+        {% elsif adventure.find-out-more %}
+          <a class="btn btn-outline-primary"
+             href="/adventures/{{ adventure.name | replace: ' ', '-' | downcase }}">
+            {{ adventure.name }}
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    <a class="btn btn-outline-primary" href="/adventures">View All Adventures</a>
+  </div>
+</section>

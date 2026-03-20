@@ -1,64 +1,24 @@
-:root {
-
-  /*theme colors*/
-  --blue: #00c8ff;
-  --blue-transparent: #00c8ffcc;
-  --blue-dark: #174a7a;
-  --blue-gradient: linear-gradient(to bottom, #5184b4, #174a7a, #002050);
-  --blue-gradient2: linear-gradient(to bottom left, #00B4DB, #0083B0);
-
-  --green: #18b600;
-  --green-transparent: #18b600cc;
-  --green-dark: #007200;
-  --green-gradient: linear-gradient(to bottom, #18b600, #008f00, #007200);
-  --green-gradient2: linear-gradient(to bottom, #52c234, #061700);
-
-
-  --yellow: #f0ac00;
-  --yellow-dark: #d08d00;
-  --yellow-gradient: linear-gradient(to bottom, #f0ac00, #d08d00);
-  --yellow-gradient2: linear-gradient(10deg, #f0ac00, #db36a4); /*f7ff00*/
-
-  --red: #970000;
-  --red-dark: #680000;
-  --red-orange: #f83600;
-  --red-orange-transparent: #f83600cc;
-  --red-gradient: linear-gradient(to bottom, #970000, #800000, #680000);
-  --red-gradient2: linear-gradient(170deg, #fe8c00, #f83600);
-
-  --pink: #f953c6;
-  --pink-dark: #b91d73;
-  --pink-gradient: linear-gradient(to bottom, #f953c6, #b91d73);
-  --pink-gradient2: radial-gradient(#ff6a00, #ee0979);
-
-  --blue-pink-gradient: linear-gradient(to top, #f953c6 20%, #8E2DE2, #00c8ff);
-  --blue-green-gradient: linear-gradient(to bottom, #18b600, #00c8ff);
-
-
-  --savage-bg-fallback: #00c8ff;
-  --savage-bg: linear-gradient(135deg, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
-  --savage-bg-to-top: linear-gradient(to top, #ff3300 0%, #ff5100 5%, #e97a15 20%, #76a088 40%, #00c8ff 100%);
-
-  --light-gradient-blue: linear-gradient(to bottom, #0575E6, #021B79);
-  --light-gradient-purple: linear-gradient(to bottom, #8E2DE2, #4A00E0);
-  --light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
-  --light-gradient-green: linear-gradient(to bottom, #43C6AC, #191654);
-
-
-  --ink: #000021;
-  --ink-light: #606074;
-  --white: #ffffff;
-  --white-transparent: #ffffff88;
-  --black-transparent: #00002166;
-
-}
+---
+---
 
 @font-face {
   font-family: "rust";
   src: url("/assets/fonts/zing-rust-grunge2-base.otf") format("opentype");
 }
 
+/* Inline SVG icons — inherit Font Awesome sizing */
+svg.svg-inline--fa {
+  display: inline-block;
+  overflow: visible;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
 /*General Styles*/
+a {
+  text-decoration: none;
+}
+
 /*Typography*/
 /*100,300,400,900*/
 h1, h2, h3, .display-heading {
@@ -123,7 +83,7 @@ header {
     padding-right: 5px;
   }
 
-  .nav .nav-link {
+  .nav-link {
     font-family: 'rust', sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -151,22 +111,24 @@ header {
   min-width: 180px;
 }
 
+.quick-links .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .quick-links .card i {
   font-size: 4.5em;
 }
 
 .quick-links h5 {
   padding-top: 15px;
-  display: inline-block;
+  min-height: 2.4em;
 }
 
 @media (max-width: 576px) {
-  .quick-links .card-deck {
-    flex-flow: row wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-  }
-
   .quick-links .card {
     max-height: 120px;
     max-width: 120px;
@@ -182,6 +144,14 @@ header {
     font-size: 0.8rem;
     padding-top: 5px;
   }
+}
+
+.quick-links .card.adventures {
+  background: var(--savage-bg);
+}
+
+.quick-links .card.gift-cards {
+  background: var(--green-gradient2);
 }
 
 .quick-links .card.about-us {
@@ -212,21 +182,8 @@ header {
   opacity: 0.7;
 }
 
-.upcoming-events {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.upcoming-events h1 {
-}
-
-.upcoming-events .card, .our-team .card {
+.our-team .card {
   border: none;
-}
-
-.upcoming-events .card img {
-  max-height: 250px;
-  object-fit: cover;
 }
 
 .page-intro, .page-info {
@@ -274,19 +231,6 @@ header {
   overflow: hidden;
 }
 
-/*.our-team .card.peter{
-    background: var(--savage-bg);
-}
-.our-team .card.simon {
-    background: var(--light-gradient-green);
-}
-.our-team .card.phil {
-    background: var(--light-gradient-purple);
-}
-.our-team .card.beckii {
-    background: var(--light-gradient-pink);
-}*/
-
 .book-now-button, .find-out-more-button {
   color: var(--white);
   margin-bottom: 20px;
@@ -299,29 +243,9 @@ header {
   transition: all 0.2s;
 }
 
-@media (max-width: 576px) {
-  /* Mobile */
-  .adventures-summary{
-    &.desktop {
-      display: none;
-    }
-    &.mobile {
-      display: block;
-      max-width: 100%;
-    }
-  }
-}
-
 @media (min-width: 576px) {
-  /* Desktop */
   .adventures-summary {
     max-width: 80%;
-    &.desktop {
-      display: block;
-    }
-    &.mobile {
-      display: none;
-    }
   }
 
   .adventures-summary .row img {
@@ -404,13 +328,20 @@ header {
 
 /*Book Now Modal*/
 .modal .modal-dialog {
-  min-width: 680px;
   height: 450px;
 }
 
 .modal .modal-content {
-  min-width: 680px;
   height: 450px;
+}
+
+@media (min-width: 768px) {
+  .modal .modal-dialog {
+    min-width: 680px;
+  }
+  .modal .modal-content {
+    min-width: 680px;
+  }
 }
 
 .modal .modal-body {
@@ -422,47 +353,18 @@ header {
   background-image: url("../images/guide-bex.jpg");
 }
 
-.modal .modal-body.background-tom {
-  background-image: url("../images/mountain-biking-trail.jpg");
-}
-
-.modal .modal-body.background-runjump {
-  background-image: url("../images/coasteering-run-jump.jpg");
-}
-
-.modal .modal-body.background-jumpnervous {
-  background-image: url("../images/canyoning-jump-nervous.jpg");
-}
-
-.modal .modal-body.background-waterfallslide {
-  background-image: url("../images/canyoning-slide.jpg");
-}
-
-.modal .modal-body.background-philcoasteeringjump {
-  background-image: url("../images/guide-phil-coasteering-jump.jpg");
-}
-
-.modal .close {
-  color: var(--white);
-  font-size: 48px;
-  line-height: 8px;
+.modal .btn-close {
   opacity: 1;
   z-index: 2;
-  background: none;
-  border: none;
 }
 
-.modal .close:hover {
+.modal .btn-close:hover {
   opacity: 0.6;
 }
 
 .modal .modal-heading-top {
   margin-top: 15px;
   letter-spacing: 0.2rem;
-}
-
-.modal .modal-heading-middle {
-  margin-top: 50px;
 }
 
 .modal .modal-heading-bottom {
@@ -475,14 +377,6 @@ header {
 
 .modal .modal-heading-orange {
   color: var(--red-orange);
-}
-
-.modal .modal-heading-blue {
-  color: var(--blue);
-}
-
-.modal .modal-heading-orange.text-runjump {
-  font-size: 1.5rem;
 }
 
 .modal form {
@@ -536,7 +430,6 @@ header {
   }
 
   .modal .modal-content {
-    min-width: auto;
     max-width: 100vw;
   }
 
@@ -561,15 +454,7 @@ header {
   }
 }
 
-#contact-form-row .col.name {
-  padding-left: 0;
-  padding-right: 5px;
-}
 
-#contact-form-row .col.email {
-  padding-left: 15px;
-  padding-right: 10px;
-}
 
 #contact-form-row .form-control.message {
   height: 160px;

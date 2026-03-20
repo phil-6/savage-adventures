@@ -2,8 +2,12 @@
 layout: default
 title: Outdoor Activities Wales
 tagline: Discover your primal side
+description: "Outdoor adventures in South Wales - coasteering, canyoning, climbing, surfing and more. Discover your primal side with Savage Adventures."
+og_image: coasteering-jump-together.jpg
 ---
 {% assign header_images = site.static_files | where: 'header_image', true %}
 {% include main/slideshow.html %}
+{% include main/booking-cta.html %}
 {% include main/quick-links.html %}
+{% include main/social-proof.html %}
 {% include lightwidget.html %}

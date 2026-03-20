@@ -1,14 +1,13 @@
-<!-- Modal -->
-<div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel"
+<!-- Book Now Modal -->
+<div class="modal fade" id="bookNowModal" tabindex="-1" aria-labelledby="bookNowModalLabel"
      aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+      <h5 class="visually-hidden" id="bookNowModalLabel">Book Now</h5>
       <div class="modal-body background-bec">
         <div class="row">
           <div class="col align-self-end">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
         </div>
         <div class="row">
@@ -17,21 +16,19 @@
               Ready to take the plunge?
             </h3>
 
-            <h1 class="modal-heading-orange modal-heading-bottom">
+            <h2 class="modal-heading-orange modal-heading-bottom">
               Contact us to book
-            </h1>
+            </h2>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6">
-            <form id="contact-us-form"
+            <form id="book-now-form"
                   class="gform"
                   method="POST"
-                  data-sheet="fromJuly2025"
-                  action="https://script.google.com/macros/s/AKfycbzWsKEOl9pSSYSeruZOKUOOwSjl2U4H6X0MWOl4NYa9sJr11AT5978f0DwZHAFdsWHe/exec">
-              <!--data-email="bookings@savage-adventures.com"-->
-              {% include contact/contact-form-fields.html %}
+
+                  action="{{ site.bookwild.enquiry_endpoint }}">
+              {% include contact/contact-form-fields.html form_id="book-now" %}
               <div style="display:none" class="thankyou_message">
-                <!-- You can customize the thankyou message by editing the code below -->
                 <h2><em>Thanks</em> for contacting us! We will get back to you soon!
                 </h2>
               </div>

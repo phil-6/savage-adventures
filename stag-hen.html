@@ -1,17 +1,21 @@
 ---
 layout: default
-title: Outdoor Activities Wales
+title: Stag & Hen Adventures
 tagline: Give them the send off they deserve
 bodyclass: stag-hen
+description: "Plan the ultimate stag or hen do with outdoor adventures in South Wales - coasteering, canyoning, climbing and more."
+og_image: coasteering-big-splash.jpg
 ---
 <section class="container-fluid page-intro">
   {% capture page-intro %}{% include stag-hen/page-intro.md%}{% endcapture %}
   {{ page-intro | markdownify }}
   <div class="row text-center">
     <div class="col">
-      <button type="button" class="book-now-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+      <a class="book-now-button btn btn-primary"
+         href="{{ site.bookwild.activities_url }}"
+         target="_blank" rel="noopener noreferrer">
         Book Your Adventure Now!
-      </button>
+      </a>
     </div>
   </div>
 </section>

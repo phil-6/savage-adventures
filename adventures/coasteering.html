@@ -2,25 +2,26 @@
 layout: default
 title: Coasteering
 tagline: Coasteering Adventures
+description: "Coasteering adventures on the Gower Peninsula, South Wales. Cliff jumping, cave exploring and swimming from £60pp."
+og_image: coasteering-run-jump.jpg
 ---
-
+{% include adventures/breadcrumb.html %}
 <section class="container-fluid page-intro">
   <div class="row text-center">
     <div class="col">
-      <button type="button" class="book-now-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+      <a class="book-now-button btn btn-primary"
+         href="{{ site.bookwild.activities_url }}/coasteering">
         Book Your Adventure Now!
-      </button>
+      </a>
     </div>
   </div>
   <div class="row">
     <div class="col text-center">
-      <p>We offer a range of activities at Savage Adventures, whether you're a seasoned adventurer or wanting to get outside that little bit
-        more, there is something for you. </p>
-      <p>Read on to find out more, or if you have any questions just get in touch.</p>
+      <p>Read on to find out more about coasteering, or if you have any questions just get in touch.</p>
     </div>
   </div>
   {% include main/adventure-slideshow.liquid %}
-  <!--  <img width="100%" src="/assets/images/header_images/header-01-coasteering.png">-->
+
 </section>
 <section class="container-fluid page-content adventures-detail">
   <div class="info-section">
@@ -44,9 +45,9 @@ tagline: Coasteering Adventures
   </div>
   <div class="info-section">
     <h2>Who's it best for?</h2>
-    <p>Coasteering is an adventurous physical activity which involves several hours of scrabling over uneven and often slippery sea cliffs
+    <p>Coasteering is an adventurous physical activity which involves several hours of scrambling over uneven and often slippery sea cliffs
       and swimming in the open ocean as such we recommend at least a moderate level of fitness and basic swimming ability. The actual
-      swimming is minimal so don’t worry if you’re not a strong swimming, our kit will keep you afloat and our guides will keep you safe</p>
+      swimming is minimal so don’t worry if you’re not a strong swimmer, our kit will keep you afloat and our guides will keep you safe</p>
   </div>
   <div class="info-section">
     <h2>What we’ll provide?</h2>
@@ -66,7 +67,7 @@ tagline: Coasteering Adventures
       <li><strong>Shorts</strong> to go over your wetsuit.</li>
       <li><strong>Swim gear</strong> to go under your wetsuit.<sup>*</sup></li>
       <li><strong>Towel and warm clothes</strong> for after.</li>
-      <li><strong>Lunch</strong> (although we can recommend a good couple of great local pubs nearby)</li>
+      <li><strong>Lunch</strong> (although we can recommend a couple of great local pubs nearby)</li>
       <li><strong>Yourselves.</strong></li>
     </ul>
     <p><sup>*</sup>You are more than welcome to bring extra clothing to wear underneath your wetsuit but we can’t
@@ -79,10 +80,10 @@ tagline: Coasteering Adventures
     <h2>How much is it?</h2>
     <h4>£60 Per Person</h4>
     <div class="text-center">
-      <button type="button" class="book-now-button btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#bookNowModal">
+      <a class="book-now-button btn btn-primary"
+         href="{{ site.bookwild.activities_url }}/coasteering">
         Book Now!
-      </button>
+      </a>
       <p class="small">Group discounts available!</p>
     </div>
   </div>
@@ -93,3 +94,4 @@ tagline: Coasteering Adventures
       day. </p>
   </div>
 </section>
+{% include adventures/more-adventures.html %}

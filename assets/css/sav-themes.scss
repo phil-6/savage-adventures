@@ -1,18 +1,15 @@
+---
+---
 /* theme colours */
-$dark: #0e182a;
 $ink-dark: #05285a;
 $light: #dfecf1;
-$ink-light: #ece9e6;
 
 $white: #f6f8f9;
 $gray: #dfecf1;
-$dark-gray: #495087;
 $medium-gray: #c8bedc;
-
 
 $ink: #000021;
 $ink-light: #606074;
-$white: #f6f8f9;
 $white-transparent: #ffffff88;
 $black-transparent: #00002166;
 $white-transparent-bg: #f6f8f9dd;
@@ -64,13 +61,32 @@ $light-gradient-blue: linear-gradient(to bottom, $white, #99e9ff);
 $light-gradient-purple: linear-gradient(to bottom, #8E2DE2, $purple-medium);
 $light-gradient-pink: linear-gradient(to bottom, #ef32d9, #89fffd);
 $light-gradient-green: linear-gradient(to bottom, #43C6AC, $green);
-$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow,);
+$light-gradient-yellow: linear-gradient(to bottom, $white, $medium-gray 80%, $yellow);
 $light-background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
 
 $dark-gradient-purple: linear-gradient(to bottom, $purple-deep, $purple-medium, #8E2DE2);
 $dark-gradient-pink: linear-gradient(170deg, #0e182a, #b91d73);
 $dark-gradient-green: linear-gradient(to bottom, $green-black, $green-dark, $green);
 
+
+/* CSS custom properties generated from SCSS variables */
+:root {
+  --ink: #{$ink};
+  --ink-light: #{$ink-light};
+  --white: #{$white};
+  --blue: #{$blue};
+  --blue-dark: #{$blue-dark};
+  --blue-gradient2: #{$blue-gradient2};
+  --blue-pink-gradient: #{$blue-pink-gradient};
+  --blue-green-gradient: #{$blue-green-gradient};
+  --yellow-gradient2: #{$yellow-gradient2};
+  --red-orange: #{$red-orange};
+  --red-gradient2: #{$red-gradient2};
+  --green-gradient2: #{$green-gradient2};
+  --pink-gradient2: #{$pink-gradient2};
+  --savage-bg: #{$savage-bg};
+  --savage-bg-fallback: #{$savage-bg-fallback};
+}
 
 body {
 
@@ -124,8 +140,8 @@ body {
       color: #3b5998;
     }
 
-    &.social-twitter:hover {
-      color: #1da1f2;
+    &.social-x:hover {
+      color: #000000;
     }
 
     &.social-instagram:hover {
@@ -268,8 +284,12 @@ body {
       }
     }
 
-    .page-intro, .page-info, .nav .nav-link{
+    .page-intro, .page-info, .nav-link {
       color: $white;
+    }
+
+    .nav-link.active {
+      color: $blue;
     }
 
     ul.dropdown-menu.show {
@@ -334,8 +354,12 @@ body {
 
     }
 
-    .page-intro, .page-info, .nav .nav-link{
+    .page-intro, .page-info, .nav-link {
       color: $white;
+    }
+
+    .nav-link.active {
+      color: $blue;
     }
 
     ul.dropdown-menu.show {
@@ -405,6 +429,10 @@ body {
       }
     }
 
+    .nav-link.active {
+      color: $blue-dark;
+    }
+
     ul.dropdown-menu.show {
       background-color: $white-transparent-bg;
     }
@@ -434,5 +462,25 @@ body {
       background: $light-gradient-yellow fixed;
     }
 
+  }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

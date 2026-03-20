@@ -69,6 +69,25 @@ $dark-gradient-pink: linear-gradient(170deg, #0e182a, #b91d73);
 $dark-gradient-green: linear-gradient(to bottom, $green-black, $green-dark, $green);
 
 
+/* CSS custom properties generated from SCSS variables */
+:root {
+  --ink: #{$ink};
+  --ink-light: #{$ink-light};
+  --white: #{$white};
+  --blue: #{$blue};
+  --blue-dark: #{$blue-dark};
+  --blue-gradient2: #{$blue-gradient2};
+  --blue-pink-gradient: #{$blue-pink-gradient};
+  --blue-green-gradient: #{$blue-green-gradient};
+  --yellow-gradient2: #{$yellow-gradient2};
+  --red-orange: #{$red-orange};
+  --red-gradient2: #{$red-gradient2};
+  --green-gradient2: #{$green-gradient2};
+  --pink-gradient2: #{$pink-gradient2};
+  --savage-bg: #{$savage-bg};
+  --savage-bg-fallback: #{$savage-bg-fallback};
+}
+
 body {
 
   // Defaults

@@ -113,6 +113,11 @@
             submitBtn.parentNode.insertBefore(errorDiv, submitBtn);
             submitBtn.disabled = false;
         }
+        // Reset Turnstile widget so the user gets a fresh token on retry
+        var turnstileDiv = form.querySelector('.cf-turnstile');
+        if (turnstileDiv && typeof turnstile !== 'undefined') {
+            turnstile.reset(turnstileDiv);
+        }
     }
 
     function showSpinner(form) {
@@ -138,12 +143,15 @@
 
 // Turnstile callback — scope to the form whose challenge was completed
 window.onTurnstileSuccess = function (token) {
-    var input = document.querySelector('input[name="cf-turnstile-response"][value="' + token + '"]');
-    if (input) {
-        var form = input.closest('form');
-        if (form) {
-            var btn = form.querySelector('button[type="submit"]');
-            if (btn) btn.disabled = false;
+    var inputs = document.querySelectorAll('input[name="cf-turnstile-response"]');
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === token) {
+            var form = inputs[i].closest('form');
+            if (form) {
+                var btn = form.querySelector('button[type="submit"]');
+                if (btn) btn.disabled = false;
+            }
+            break;
         }
     }
 };

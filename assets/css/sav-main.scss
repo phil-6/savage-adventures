@@ -6,14 +6,12 @@
   src: url("/assets/fonts/zing-rust-grunge2-base.otf") format("opentype");
 }
 
-/* Inline SVG icons — match Font Awesome sizing */
+/* Inline SVG icons — inherit Font Awesome sizing */
 svg.svg-inline--fa {
   display: inline-block;
+  overflow: visible;
   height: 1em;
-  width: 1em;
   vertical-align: -0.125em;
-  &.fa-2x { height: 2em; width: 2em; }
-  &.fa-lg { height: 1.25em; width: 1.25em; }
 }
 
 /*General Styles*/

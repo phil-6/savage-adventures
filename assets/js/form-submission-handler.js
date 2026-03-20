@@ -150,10 +150,14 @@
     }
 })();
 
-// turnstile
+// turnstile - scope callback to the form whose challenge was completed
 window.onTurnstileSuccess = function (token) {
-    const disabledSubmitButtons = document.querySelectorAll('button[type="submit"][disabled]');
-    disabledSubmitButtons.forEach(function (button) {
-        button.disabled = false;
-    });
+    var input = document.querySelector('input[name="cf-turnstile-response"][value="' + token + '"]');
+    if (input) {
+        var form = input.closest('form');
+        if (form) {
+            var btn = form.querySelector('button[type="submit"]');
+            if (btn) btn.disabled = false;
+        }
+    }
 };

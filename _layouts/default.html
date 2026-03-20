@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="author" content="Phil Reynolds">
-  <meta name="theme-color" content="#ff3300">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" sizes="16x16"/>
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" sizes="32x32"/>
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" sizes="96x96"/>
+  <meta name="author" content="{{ site.author }}">
+  <meta name="theme-color" content="{{ site.theme_color }}">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
 
   <title>{{ page.title }} | Savage Adventures</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">

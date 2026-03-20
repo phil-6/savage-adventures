@@ -1,5 +1,5 @@
 const btn = document.querySelector("#theme-toggle");
-if (!btn) throw new Error("Theme toggle button not found");
+if (!btn) return;
 const label = btn.querySelector('#theme-label')
 const body = document.body
 // check to see if OS preferences for light or dark mode
@@ -21,6 +21,8 @@ function setTheme() {
             // if no preferences, default to multi theme
             currentTheme = "multi"
         }
+        // persist the auto-detected theme so detection doesn't re-run each page load
+        try { localStorage.setItem("theme", currentTheme); } catch(e) {}
         setTheme()
     } else if (currentTheme === "dark") {
         body.classList.remove("light-mode");
@@ -54,7 +56,7 @@ btn.addEventListener("click", function () {
         currentTheme = "dark";
         setTheme()
     }
-    localStorage.setItem("theme", currentTheme);
+    try { localStorage.setItem("theme", currentTheme); } catch(e) {}
 });
 
 btn.addEventListener('mouseenter', () => label.classList.add('show-label'))

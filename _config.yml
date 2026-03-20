@@ -1,8 +1,11 @@
 # Site settings
 title: Savage Adventures
+author: Phil Reynolds
 email: info@savage-adventures.com
 phone: "07895 834955"
 customer_email: savageadventures@bookwild.app
+theme_color: "#ff3300"
+turnstile_sitekey: "0x4AAAAAAABbnffUqgcrqQAD"
 description: >-
   Discover your primal side. Outdoor adventures including coasteering,
   canyoning, climbing, surfing and more across South Wales.

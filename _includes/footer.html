@@ -1,5 +1,45 @@
-<footer>
-  <section class="text-center">
-    <a href="/terms">Terms and Conditions</a>
-  </section>
+<footer class="container-fluid py-4 mt-4">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-4 mb-3">
+      <h5>Contact</h5>
+      <p>
+        <a href="mailto:{{ site.customer_email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ site.customer_email }}</a><br>
+        <a href="tel:+44{{ site.phone | remove: ' ' | remove: '0' }}"><i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}</a>
+      </p>
+      <p>South Wales</p>
+    </div>
+    <div class="col-md-4 mb-3">
+      <h5>Quick Links</h5>
+      <ul class="list-unstyled">
+        <li><a href="/adventures">Adventures</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="/terms">Terms and Conditions</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4 mb-3">
+      <h5>Follow Us</h5>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://www.facebook.com/Savage.Adventures" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/savage.adventures/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://x.com/sav_adventures" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <i class="fab fa-x-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC23cqj-gvRmK4-nGjWLRo6w" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fab fa-youtube fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.tripadvisor.co.uk/Attraction_Review-g186463-d12964875-Reviews-Savage_Adventures-Newport_South_Wales_Wales.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor">
+          <i class="fab fa-tripadvisor fa-lg" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <small>&copy; {{ "now" | date: "%Y" }} Savage Adventures. All rights reserved.</small>
+    </div>
+  </div>
 </footer>

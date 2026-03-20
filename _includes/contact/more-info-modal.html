@@ -24,8 +24,8 @@
             <form id="more-info-form"
                   class="gform"
                   method="POST"
-                  data-sheet="fromJuly2025"
-                  action="{{ site.form_action_url }}">
+
+                  action="{{ site.bookwild.enquiry_endpoint }}">
               {% include contact/contact-form-fields.html form_id="more-info" %}
               <div style="display:none" class="thankyou_message">
                 <h2><em>Thanks</em> for contacting us! We will get back to you soon!

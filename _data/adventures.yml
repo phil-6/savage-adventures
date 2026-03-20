@@ -1,13 +1,15 @@
 adventures:
   - name: Canyoning
     image: canyoning-waterfall-group.jpg
+    bookwild_short_name: canyoning-gorge-walking
+    price_per_person: 60
     description: >
       Gain a new and unique perspective on the world famous <strong><a
       href="https://www.breconbeacons.org/things-to-do/attractions/natural/visiting-waterfall-country/walking-trails">Waterfall
       Country</a></strong> in the Brecon Beacons, see the rivers from an
       entirely new angle. Spend an action packed day climbing through
       waterfalls, exploring behind the curtain and jumping into deep plunge
-      pools. Nature’s own water slides and rapids put waterparks all over the
+      pools. Nature's own water slides and rapids put waterparks all over the
       world to shame.
     available: true
     visible: true
@@ -19,10 +21,12 @@ adventures:
       - header-02-canyoning.jpg
   - name: Coasteering
     image: coasteering-jump-together.jpg
+    bookwild_short_name: coasteering
+    price_per_person: 60
     description: >
-      Coasteering is defined as “an activity that encompasses movement
+      Coasteering is defined as "an activity that encompasses movement
       along the intertidal zone of a rocky coastline on foot or by swimming,
-      without the aid of boats, surf boards or other craft.” Invented 30 years
+      without the aid of boats, surf boards or other craft." Invented 30 years
       ago on the Welsh coastline, coasteering has grown into a global adventure
       sport. Come join us for an unforgettable adventure exploring the natural
       wonder that first inspired the sport.
@@ -39,6 +43,8 @@ adventures:
       - header-40-coasteering.jpg
   - name: Climbing
     image: guide-pete-climbing.jpg
+    bookwild_short_name: climbing
+    price_per_person: 60
     description: >
       Now an olympic sport, climbing is in the spotlight and is rapidly growing
       in popularity. Climbing is one of the most thrilling, rewarding and unique
@@ -60,13 +66,14 @@ adventures:
       - header-33-abseiling.jpg
   - name: Surfing
     image: surfing-1.jpg
+    price_per_person: 60
     description: >
-      Surfing at Rhossili Beach is an experience like no other. With its 
-      expansive golden sands set against a backdrop of dramatic cliffs and 
-      rolling waves, Rhossili offers surfers a pristine playground. Whether 
-      you're catching your first wave or carving a seasoned line, the consistent 
-      swells and stunning scenery make Rhossili Beach a surfer's paradise. Dive 
-      into the rhythm of the ocean and let the iconic Welsh coastline take your 
+      Surfing at Rhossili Beach is an experience like no other. With its
+      expansive golden sands set against a backdrop of dramatic cliffs and
+      rolling waves, Rhossili offers surfers a pristine playground. Whether
+      you're catching your first wave or carving a seasoned line, the consistent
+      swells and stunning scenery make Rhossili Beach a surfer's paradise. Dive
+      into the rhythm of the ocean and let the iconic Welsh coastline take your
       breath away.
     available: true
     visible: true
@@ -80,6 +87,7 @@ adventures:
       - header-32-surfing.jpg
   - name: Sit-on-Top Kayaking
     image: sit-on-top.jpg
+    price_per_person: 60
     description: >
       Experience the thrill of sit-on-top kayaking as you explore the stunning
       waterways of South Wales. Whether you're gliding through serene rivers or
@@ -87,7 +95,7 @@ adventures:
       yet accessible way to get close to nature. Perfect for beginners and
       seasoned paddlers alike, our guided adventures will have you weaving
       through lush landscapes, tackling gentle rapids, or embracing the salt
-      spray of coastal waters. All you need is a sense of adventure — we’ll take
+      spray of coastal waters. All you need is a sense of adventure — we'll take
       care of the rest.
     available: true
     visible: true
@@ -97,6 +105,7 @@ adventures:
     education: true
   - name: Guided Walks
     image: walking-mountain-cloud.jpg
+    price_per_person: 60
     description: >
       Feeling like you want to keep both feet on the ground, but don't
       want to miss out on the spectacular sights and wonders of Wales…? Well,
@@ -116,6 +125,7 @@ adventures:
       - header-15-all-weather.jpg
   - name: SUP
     image: guide-pete-paddleboard-swim.jpg
+    price_per_person: 60
     description: >
       Stand Up Paddle Boarding is one of the fastest growing watersports
       with thousands more people giving it a go each year. We offer the normal
@@ -145,6 +155,7 @@ adventures:
     education: true
   - name: Training and Courses
     image: logo-small.png
+    bookwild_short_name: first-aid
     description: >
       We offer a range of first aid courses, from basic to advanced, to ensure
       you are prepared for any situation. Our courses are designed to be

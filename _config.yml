@@ -23,8 +23,14 @@ defaults:
     values:
       header_image: true
 
-# Form submission
-form_action_url: "https://script.google.com/macros/s/AKfycbzWsKEOl9pSSYSeruZOKUOOwSjl2U4H6X0MWOl4NYa9sJr11AT5978f0DwZHAFdsWHe/exec"
+# BookWild Integration
+bookwild:
+  base_url: "https://bookwild.app"
+  org_slug: "savageadventures"
+  enquiry_endpoint: "https://bookwild.app/savageadventures/api/v1/enquiries"
+  activities_url: "https://bookwild.app/savageadventures/activities"
+  sessions_url: "https://bookwild.app/savageadventures/sessions"
+  gift_cards_url: "https://bookwild.app/savageadventures/gift_cards/new"
 
 # Build settings
 plugins:

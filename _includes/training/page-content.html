@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col">
       <div class="btn-container">
-        <button type="button" class="book-now-button btn btn-orange"
-                data-bs-toggle="modal"
-                data-bs-target="#bookNowModal">
+        <a class="book-now-button btn btn-orange"
+           href="{{ site.bookwild.activities_url }}/first-aid"
+           target="_blank" rel="noopener noreferrer">
           Book Now!
-        </button>
+        </a>
       </div>
       <h2 class="rust-heading">Available Courses</h2>
       {% include training/first-aid/paediatric.html %}
@@ -14,13 +14,12 @@
       {% include training/first-aid/outdoor.html %}
       {% include training/first-aid/list.html %}
       <div class="btn-container">
-        <button type="button" class="book-now-button btn btn-orange"
-                data-bs-toggle="modal"
-                data-bs-target="#bookNowModal">
+        <a class="book-now-button btn btn-orange"
+           href="{{ site.bookwild.activities_url }}/first-aid"
+           target="_blank" rel="noopener noreferrer">
           Book Now!
-        </button>
+        </a>
       </div>
     </div>
   </div>
-
 </section>

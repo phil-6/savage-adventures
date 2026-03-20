@@ -1,156 +1,142 @@
 (function () {
 
-    // get all data in form and return object
     function getFormData(form) {
-        let elements = form.elements;
-        let honeypot;
+        var data = {};
+        var honeypot = '';
+        var elements = form.elements;
 
-        let fields = Object.keys(elements).filter(function (k) {
-            if (elements[k].name === "honeypot") {
-                honeypot = elements[k].value;
-                return false;
+        for (var i = 0; i < elements.length; i++) {
+            var el = elements[i];
+            if (!el.name || el.name === 'cf-turnstile-response') continue;
+            if (el.name === 'honeypot') {
+                honeypot = el.value;
+                continue;
             }
-            return true;
-        }).map(function (k) {
-            if (elements[k].name !== undefined) {
-                return elements[k].name;
-                // special case for Edge's html collection
-            } else if (elements[k].length > 0) {
-                return elements[k].item(0).name;
+            if (el.type === 'checkbox' || el.type === 'radio') {
+                if (el.checked) data[el.name] = el.value;
+            } else {
+                data[el.name] = el.value;
             }
-        }).filter(function (item, pos, self) {
-            return self.indexOf(item) === pos && item;
-        });
+        }
 
-        let formData = {};
-        fields.forEach(function (name) {
-            let element = elements[name];
+        // Include Turnstile token
+        var turnstileInput = form.querySelector('input[name="cf-turnstile-response"]');
+        if (turnstileInput) {
+            data['cf-turnstile-response'] = turnstileInput.value;
+        }
 
-            // singular form elements just have one value
-            formData[name] = element.value;
-
-            // when our element has multiple items, get their values
-            if (element.length) {
-                let data = [];
-                for (let i = 0; i < element.length; i++) {
-                    let item = element.item(i);
-                    if (item.checked || item.selected) {
-                        data.push(item.value);
-                    }
-                }
-                formData[name] = data.join(', ');
-            }
-        });
-
-        // add form-specific values into the data
-        formData.formDataNameOrder = JSON.stringify(fields);
-        formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-        formData.formGoogleSend = form.dataset.email || ""; // no email by default
-
-        return {data: formData, honeypot};
+        return { data: data, honeypot: honeypot };
     }
 
-    function handleFormSubmit(event) {  // handles form submit without any jquery
-        event.preventDefault();           // we are submitting via xhr below
-        let form = event.target;
-        let formData = getFormData(form);
-        let data = formData.data;
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+        var form = event.target;
+        var formData = getFormData(form);
 
-        // If a honeypot field is filled, assume it was done so by a spam bot.
-        if (formData.honeypot) {
-            return false;
-        }
+        // Honeypot filled — silently bail
+        if (formData.honeypot) return false;
 
         disableAllButtons(form);
         showSpinner(form);
-        let url = form.action;
-        let xhr = new XMLHttpRequest();
-        let timeoutDuration = 5000;
 
-        let timeout = setTimeout(function () {
-            resetForm(form);
-        }, timeoutDuration);
+        var url = form.action;
 
-        xhr.open('POST', url);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                clearTimeout(timeout);
-                if (xhr.status === 200) {
-                    resetForm(form);
-                } else if (xhr.status !== 0) {
-                    hideSpinner(form);
-                    alert("Form submission failed. Please try again.");
-                    let buttons = form.querySelectorAll("button");
-                    for (let i = 0; i < buttons.length; i++) {
-                        buttons[i].disabled = false;
-                    }
-                }
+        try {
+            var response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData.data)
+            });
+
+            if (response.status === 204) {
+                // Honeypot triggered server-side — show fake success
+                showSuccess(form, 'Thanks for your enquiry!');
+                return;
             }
-        };
-        // url encode form data for sending as post data
-        let encoded = Object.keys(data).map(function (k) {
-            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-        }).join('&');
-        xhr.send(encoded);
-    }
 
-    function loaded() {
-        // bind to the submit event of our form
-        let forms = document.querySelectorAll("form.gform");
-        for (let i = 0; i < forms.length; i++) {
-            forms[i].addEventListener("submit", handleFormSubmit, false);
+            var result = await response.json();
+
+            if (response.ok) {
+                showSuccess(form, result.message || 'Thanks for your enquiry!');
+            } else if (response.status === 429) {
+                showError(form, 'Too many requests. Please try again in a few minutes.');
+            } else if (response.status === 403) {
+                showError(form, 'Verification failed. Please complete the challenge and try again.');
+            } else {
+                showError(form, result.error || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            showError(form, 'Network error. Please check your connection and try again.');
         }
     }
 
-    document.addEventListener("DOMContentLoaded", loaded, false);
+    function loaded() {
+        var forms = document.querySelectorAll('form.gform');
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].addEventListener('submit', handleFormSubmit, false);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loaded, false);
 
     function disableAllButtons(form) {
-        let buttons = form.querySelectorAll("button");
-        for (let i = 0; i < buttons.length; i++) {
+        var buttons = form.querySelectorAll('button');
+        for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
         }
     }
 
-    function resetForm(form) {
-        form.reset();
+    function showSuccess(form, message) {
         hideSpinner(form);
-        let formElements = form.querySelector(".form-elements");
-        if (formElements) {
-            formElements.style.display = "none"; // hide form
+        var formElements = form.querySelector('.form-elements');
+        if (formElements) formElements.style.display = 'none';
+        var thankYou = form.querySelector('.thankyou_message');
+        if (thankYou) {
+            var h2 = thankYou.querySelector('h2');
+            if (h2) h2.textContent = message;
+            thankYou.style.display = 'block';
         }
-        let thankYouMessage = form.querySelector(".thankyou_message");
-        if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
+    }
+
+    function showError(form, message) {
+        hideSpinner(form);
+        var formElements = form.querySelector('.form-elements');
+        if (formElements) formElements.classList.remove('d-none');
+        var existing = form.querySelector('.form-error');
+        if (existing) existing.remove();
+        var errorDiv = document.createElement('div');
+        errorDiv.className = 'form-error alert alert-danger mt-2';
+        errorDiv.setAttribute('role', 'alert');
+        errorDiv.textContent = message;
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.parentNode.insertBefore(errorDiv, submitBtn);
+            submitBtn.disabled = false;
         }
     }
 
     function showSpinner(form) {
-        let spinner = form.querySelector('.form-spinner');
+        var spinner = form.querySelector('.form-spinner');
         if (spinner) {
             spinner.classList.remove('d-none');
             spinner.classList.add('d-inline-block');
         }
-        let formElements = form.querySelector('.form-elements');
-        if (formElements) {
-            formElements.classList.add('d-none');
-        }
+        var formElements = form.querySelector('.form-elements');
+        if (formElements) formElements.classList.add('d-none');
     }
 
     function hideSpinner(form) {
-        let spinner = form.querySelector('.form-spinner');
+        var spinner = form.querySelector('.form-spinner');
         if (spinner) {
             spinner.classList.add('d-none');
             spinner.classList.remove('d-inline-block');
         }
-        let formElements = form.querySelector('.form-elements');
-        if (formElements) {
-            formElements.classList.remove('d-none');
-        }
+        var formElements = form.querySelector('.form-elements');
+        if (formElements) formElements.classList.remove('d-none');
     }
 })();
 
-// turnstile - scope callback to the form whose challenge was completed
+// Turnstile callback — scope to the form whose challenge was completed
 window.onTurnstileSuccess = function (token) {
     var input = document.querySelector('input[name="cf-turnstile-response"][value="' + token + '"]');
     if (input) {

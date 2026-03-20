@@ -1,3 +1,5 @@
+---
+---
 :root {
 
   /*theme colors*/
@@ -404,13 +406,20 @@ header {
 
 /*Book Now Modal*/
 .modal .modal-dialog {
-  min-width: 680px;
   height: 450px;
 }
 
 .modal .modal-content {
-  min-width: 680px;
   height: 450px;
+}
+
+@media (min-width: 768px) {
+  .modal .modal-dialog {
+    min-width: 680px;
+  }
+  .modal .modal-content {
+    min-width: 680px;
+  }
 }
 
 .modal .modal-body {
@@ -442,17 +451,12 @@ header {
   background-image: url("../images/guide-phil-coasteering-jump.jpg");
 }
 
-.modal .close {
-  color: var(--white);
-  font-size: 48px;
-  line-height: 8px;
+.modal .btn-close {
   opacity: 1;
   z-index: 2;
-  background: none;
-  border: none;
 }
 
-.modal .close:hover {
+.modal .btn-close:hover {
   opacity: 0.6;
 }
 
@@ -536,7 +540,6 @@ header {
   }
 
   .modal .modal-content {
-    min-width: auto;
     max-width: 100vw;
   }
 

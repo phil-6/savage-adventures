@@ -66,6 +66,7 @@ adventures:
       - header-33-abseiling.jpg
   - name: Surfing
     image: surfing-1.jpg
+    bookwild_short_name: surf
     price_per_person: 60
     description: >
       Surfing at Rhossili Beach is an experience like no other. With its
@@ -87,6 +88,7 @@ adventures:
       - header-32-surfing.jpg
   - name: Sit-on-Top Kayaking
     image: sit-on-top.jpg
+    bookwild_short_name: kayaking
     price_per_person: 60
     description: >
       Experience the thrill of sit-on-top kayaking as you explore the stunning
@@ -105,6 +107,7 @@ adventures:
     education: true
   - name: Guided Walks
     image: walking-mountain-cloud.jpg
+    bookwild_short_name: guided-walk
     price_per_person: 60
     description: >
       Feeling like you want to keep both feet on the ground, but don't
@@ -125,6 +128,7 @@ adventures:
       - header-15-all-weather.jpg
   - name: SUP
     image: guide-pete-paddleboard-swim.jpg
+    bookwild_short_name: sup
     price_per_person: 60
     description: >
       Stand Up Paddle Boarding is one of the fastest growing watersports
@@ -155,7 +159,7 @@ adventures:
     education: true
   - name: Training and Courses
     image: logo-small.png
-    bookwild_short_name: first-aid
+    bookwild_short_name: faw
     description: >
       We offer a range of first aid courses, from basic to advanced, to ensure
       you are prepared for any situation. Our courses are designed to be

@@ -47,8 +47,9 @@
           integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
           crossorigin="anonymous" defer></script>
 
-  <!-- Cloudflare Turnstile: explicit rendering so each form keeps its own widget ID.
-       Deferred (not async) so onTurnstileLoad, defined in form-submission-handler.js, exists first. -->
+  <!-- Cloudflare Turnstile: explicit rendering so each form keeps its own widget ID, and modal forms
+       render only when opened. Deferred (not async) so onTurnstileLoad, defined in
+       form-submission-handler.js, exists first. -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" defer></script>
 
   <!-- Font Awesome (deferred) -->

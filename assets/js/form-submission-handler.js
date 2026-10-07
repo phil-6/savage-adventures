@@ -82,13 +82,31 @@
 
     document.addEventListener('DOMContentLoaded', loaded, false);
 
+    // A widget solves as soon as it renders, even out of sight, and each solve issues a token.
+    // The two modal forms are on every page, so they render when their modal opens rather than
+    // on load; any other form renders on load.
+    var turnstileReady = false;
+    var openedModals = new Set();
+
     // Called by api.js (?render=explicit&onload=onTurnstileLoad) once Turnstile is ready.
     window.onTurnstileLoad = function () {
+        turnstileReady = true;
         var forms = document.querySelectorAll('form.gform');
+        for (var i = 0; i < forms.length; i++) {
+            var modal = forms[i].closest('.modal');
+            // Includes a modal opened before api.js finished loading.
+            if (!modal || openedModals.has(modal)) renderTurnstile(forms[i]);
+        }
+    };
+
+    document.addEventListener('show.bs.modal', function (event) {
+        openedModals.add(event.target);
+        if (!turnstileReady) return;
+        var forms = event.target.querySelectorAll('form.gform');
         for (var i = 0; i < forms.length; i++) {
             renderTurnstile(forms[i]);
         }
-    };
+    });
 
     function renderTurnstile(form) {
         var container = form.querySelector('.turnstile-widget');

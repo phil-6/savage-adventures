@@ -1,5 +1,8 @@
 (function () {
 
+    // Each form owns one Turnstile widget; its ID is needed to reset that widget after a failed submit.
+    var turnstileWidgetIds = new WeakMap();
+
     function getFormData(form) {
         var data = {};
         var honeypot = '';
@@ -79,6 +82,43 @@
 
     document.addEventListener('DOMContentLoaded', loaded, false);
 
+    // Called by api.js (?render=explicit&onload=onTurnstileLoad) once Turnstile is ready.
+    window.onTurnstileLoad = function () {
+        var forms = document.querySelectorAll('form.gform');
+        for (var i = 0; i < forms.length; i++) {
+            renderTurnstile(forms[i]);
+        }
+    };
+
+    function renderTurnstile(form) {
+        var container = form.querySelector('.turnstile-widget');
+        if (!container || turnstileWidgetIds.has(form)) return;
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        function setSubmitEnabled(enabled) {
+            if (submitBtn) submitBtn.disabled = !enabled;
+        }
+
+        var widgetId = turnstile.render(container, {
+            sitekey: container.dataset.sitekey,
+            action: container.dataset.action,
+            size: container.dataset.size,
+            callback: function () { setSubmitEnabled(true); },
+            'expired-callback': function () { setSubmitEnabled(false); },
+            'error-callback': function () { setSubmitEnabled(false); }
+        });
+        turnstileWidgetIds.set(form, widgetId);
+    }
+
+    // Tokens are single-use, so every failed attempt needs a fresh one. The submit button stays
+    // disabled until this form's widget issues it.
+    function resetTurnstile(form) {
+        var widgetId = turnstileWidgetIds.get(form);
+        if (widgetId !== undefined && typeof turnstile !== 'undefined') {
+            turnstile.reset(widgetId);
+        }
+    }
+
     function disableAllButtons(form) {
         var buttons = form.querySelectorAll('button');
         for (var i = 0; i < buttons.length; i++) {
@@ -111,13 +151,8 @@
         var submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.parentNode.insertBefore(errorDiv, submitBtn);
-            submitBtn.disabled = false;
         }
-        // Reset Turnstile widget so the user gets a fresh token on retry
-        var turnstileDiv = form.querySelector('.cf-turnstile');
-        if (turnstileDiv && typeof turnstile !== 'undefined') {
-            turnstile.reset(turnstileDiv);
-        }
+        resetTurnstile(form);
     }
 
     function showSpinner(form) {
@@ -140,18 +175,3 @@
         if (formElements) formElements.classList.remove('d-none');
     }
 })();
-
-// Turnstile callback — scope to the form whose challenge was completed
-window.onTurnstileSuccess = function (token) {
-    var inputs = document.querySelectorAll('input[name="cf-turnstile-response"]');
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === token) {
-            var form = inputs[i].closest('form');
-            if (form) {
-                var btn = form.querySelector('button[type="submit"]');
-                if (btn) btn.disabled = false;
-            }
-            break;
-        }
-    }
-};
